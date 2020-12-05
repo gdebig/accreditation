@@ -1,0 +1,3021 @@
+186B .START (2020-12-04 07:13:16) phpCAS-1.3.6+ ****************** [CAS.php:468]
+186B .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+186B .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+186B .|    |    Session is not authenticated [Client.php:938]
+186B .|    <= ''
+186B .<= ''
+186B .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+186B .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+186B .<= ''
+186B .=> phpCAS::forceAuthentication() [Cas.php:81]
+186B .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+186B .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+186B .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+186B .|    |    |    |    no user found [Client.php:1635]
+186B .|    |    |    <= false
+186B .|    |    |    no ticket found [Client.php:1494]
+186B .|    |    <= false
+186B .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+186B .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+186B .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+186B .|    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+186B .|    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+186B .|    |    |    <= 'https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+186B .|    |    |    Redirect to : https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F [Client.php:1663]
+186B .|    |    |    exit()
+186B .|    |    |    -
+186B .|    |    -
+186B .|    -
+3178 .START (2020-12-04 07:14:16) phpCAS-1.3.6+ ****************** [CAS.php:468]
+3178 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+3178 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+3178 .|    |    Session is not authenticated [Client.php:938]
+3178 .|    |    Ticket 'ST-179-jCqBuSjjbeYlXfHHjXdo-sso.ui.ac.id' found [Client.php:1020]
+3178 .|    <= ''
+3178 .<= ''
+3178 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+3178 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+3178 .<= ''
+3178 .=> phpCAS::forceAuthentication() [Cas.php:81]
+3178 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+3178 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+3178 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+3178 .|    |    |    |    no user found [Client.php:1635]
+3178 .|    |    |    <= false
+3178 .|    |    |    CAS 2.0 ticket `ST-179-jCqBuSjjbeYlXfHHjXdo-sso.ui.ac.id' is present [Client.php:1447]
+3178 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+3178 .|    |    |    |     [Client.php:3169]
+3178 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+3178 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+3178 .|    |    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+3178 .|    |    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+3178 .|    |    |    |    <= 'https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+3178 .|    |    |    |    => CAS_Client::_readURL('https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F&ticket=ST-179-jCqBuSjjbeYlXfHHjXdo-sso.ui.ac.id', NULL, NULL, NULL) [Client.php:3191]
+3178 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+3178 .|    |    |    |    |    |    Response Body: 
+3178 .|    |    |    |    |    |    
+3178 .|    |    |    |    |    |    
+3178 .|    |    |    |    |    |    
+3178 .|    |    |    |    |    |    
+3178 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+3178 .|    |    |    |    |    |    	<cas:authenticationSuccess>
+3178 .|    |    |    |    |    |    		<cas:user>i.gde</cas:user>
+3178 .|    |    |    |    |    |    
+3178 .|    |    |    |    |    |    		<cas:attributes>
+3178 .|    |    |    |    |    |    		    
+3178 .|    |    |    |    |    |    			
+3178 .|    |    |    |    |    |    			   
+3178 .|    |    |    |    |    |    			   
+3178 .|    |    |    |    |    |    			   
+3178 .|    |    |    |    |    |    			   
+3178 .|    |    |    |    |    |    				<cas:ldap_cn>I GDE DHARMA N</cas:ldap_cn>
+3178 .|    |    |    |    |    |    			   
+3178 .|    |    |    |    |    |    			
+3178 .|    |    |    |    |    |    		    
+3178 .|    |    |    |    |    |    			
+3178 .|    |    |    |    |    |    			   
+3178 .|    |    |    |    |    |    			   
+3178 .|    |    |    |    |    |    			   
+3178 .|    |    |    |    |    |    			   
+3178 .|    |    |    |    |    |    				<cas:peran_user>staff</cas:peran_user>
+3178 .|    |    |    |    |    |    			   
+3178 .|    |    |    |    |    |    			
+3178 .|    |    |    |    |    |    		    
+3178 .|    |    |    |    |    |    			
+3178 .|    |    |    |    |    |    			   
+3178 .|    |    |    |    |    |    			   
+3178 .|    |    |    |    |    |    			   
+3178 .|    |    |    |    |    |    			   
+3178 .|    |    |    |    |    |    				<cas:nip>100120310270012891</cas:nip>
+3178 .|    |    |    |    |    |    			   
+3178 .|    |    |    |    |    |    			
+3178 .|    |    |    |    |    |    		    
+3178 .|    |    |    |    |    |    			
+3178 .|    |    |    |    |    |    			   
+3178 .|    |    |    |    |    |    			   
+3178 .|    |    |    |    |    |    			   
+3178 .|    |    |    |    |    |    			   
+3178 .|    |    |    |    |    |    				<cas:nama>I Gde Dharma Nugraha</cas:nama>
+3178 .|    |    |    |    |    |    			   
+3178 .|    |    |    |    |    |    			
+3178 .|    |    |    |    |    |    		    
+3178 .|    |    |    |    |    |    		</cas:attributes>
+3178 .|    |    |    |    |    |    
+3178 .|    |    |    |    |    |    
+3178 .|    |    |    |    |    |    
+3178 .|    |    |    |    |    |    	</cas:authenticationSuccess>
+3178 .|    |    |    |    |    |    </cas:serviceResponse>
+3178 .|    |    |    |    |    |    
+3178 .|    |    |    |    |    |     [CurlRequest.php:84]
+3178 .|    |    |    |    |    <= true
+3178 .|    |    |    |    <= true
+3178 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+3178 .|    |    |    |    |    Found nested jasig style attributes [Client.php:3345]
+3178 .|    |    |    |    |    Attribute [ldap_cn] = I GDE DHARMA N [Client.php:3352]
+3178 .|    |    |    |    |    Attribute [peran_user] = staff [Client.php:3352]
+3178 .|    |    |    |    |    Attribute [nip] = 100120310270012891 [Client.php:3352]
+3178 .|    |    |    |    |    Attribute [nama] = I Gde Dharma Nugraha [Client.php:3352]
+3178 .|    |    |    |    <= ''
+3178 .|    |    |    |    Storing Proxy List [Client.php:3270]
+3178 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+3178 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+3178 .|    |    |    |    <= true
+3178 .|    |    |    <= true
+3178 .|    |    |    CAS 2.0 ticket `ST-179-jCqBuSjjbeYlXfHHjXdo-sso.ui.ac.id' was validated [Client.php:1453]
+3178 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+3178 .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+3178 .|    |    |    Prepare redirect to : http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:1518]
+3178 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+3178 .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+3178 .|    |    |    exit()
+3178 .|    |    |    -
+3178 .|    |    -
+3178 .|    -
+A564 .START (2020-12-04 07:14:17) phpCAS-1.3.6+ ****************** [CAS.php:468]
+A564 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+A564 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+A564 .|    |    Session is authenticated as: i.gde [Client.php:936]
+A564 .|    <= ''
+A564 .<= ''
+A564 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+A564 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+A564 .<= ''
+A564 .=> phpCAS::forceAuthentication() [Cas.php:81]
+A564 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+A564 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+A564 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+A564 .|    |    |    |    user = `i.gde' [Client.php:1622]
+A564 .|    |    |    <= true
+A564 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+A564 .|    |    <= true
+A564 .|    |    no need to authenticate [Client.php:1282]
+A564 .|    <= true
+A564 .<= ''
+A564 .=> phpCAS::isAuthenticated() [Cas.php:89]
+A564 .|    => CAS_Client::isAuthenticated() [CAS.php:1145]
+A564 .|    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+A564 .|    |    |    user = `i.gde' [Client.php:1622]
+A564 .|    |    <= true
+A564 .|    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+A564 .|    <= true
+A564 .<= true
+E47C .START (2020-12-04 07:19:07) phpCAS-1.3.6+ ****************** [CAS.php:468]
+E47C .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+E47C .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+E47C .|    |    Session is authenticated as: i.gde [Client.php:936]
+E47C .|    <= ''
+E47C .<= ''
+E47C .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+E47C .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+E47C .<= ''
+E47C .=> phpCAS::forceAuthentication() [Cas.php:81]
+E47C .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+E47C .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+E47C .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+E47C .|    |    |    |    user = `i.gde' [Client.php:1622]
+E47C .|    |    |    <= true
+E47C .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+E47C .|    |    <= true
+E47C .|    |    no need to authenticate [Client.php:1282]
+E47C .|    <= true
+E47C .<= ''
+E47C .=> phpCAS::isAuthenticated() [Cas.php:89]
+E47C .|    => CAS_Client::isAuthenticated() [CAS.php:1145]
+E47C .|    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+E47C .|    |    |    user = `i.gde' [Client.php:1622]
+E47C .|    |    <= true
+E47C .|    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+E47C .|    <= true
+E47C .<= true
+0D4A .START (2020-12-04 22:23:09) phpCAS-1.3.6+ ****************** [CAS.php:468]
+0D4A .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+0D4A .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+0D4A .|    |    Session is not authenticated [Client.php:938]
+0D4A .|    <= ''
+0D4A .<= ''
+0D4A .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+0D4A .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+0D4A .<= ''
+0D4A .=> phpCAS::forceAuthentication() [Cas.php:81]
+0D4A .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+0D4A .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+0D4A .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+0D4A .|    |    |    |    no user found [Client.php:1635]
+0D4A .|    |    |    <= false
+0D4A .|    |    |    no ticket found [Client.php:1494]
+0D4A .|    |    <= false
+0D4A .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+0D4A .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+0D4A .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+0D4A .|    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+0D4A .|    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+0D4A .|    |    |    <= 'https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+0D4A .|    |    |    Redirect to : https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F [Client.php:1663]
+0D4A .|    |    |    exit()
+0D4A .|    |    |    -
+0D4A .|    |    -
+0D4A .|    -
+8E73 .START (2020-12-04 22:23:19) phpCAS-1.3.6+ ****************** [CAS.php:468]
+8E73 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+8E73 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+8E73 .|    |    Session is not authenticated [Client.php:938]
+8E73 .|    |    Ticket 'ST-3-lmbOBtoaOVCrt0soUgfy-sso.ui.ac.id' found [Client.php:1020]
+8E73 .|    <= ''
+8E73 .<= ''
+8E73 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+8E73 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+8E73 .<= ''
+8E73 .=> phpCAS::forceAuthentication() [Cas.php:81]
+8E73 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+8E73 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+8E73 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+8E73 .|    |    |    |    no user found [Client.php:1635]
+8E73 .|    |    |    <= false
+8E73 .|    |    |    CAS 2.0 ticket `ST-3-lmbOBtoaOVCrt0soUgfy-sso.ui.ac.id' is present [Client.php:1447]
+8E73 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+8E73 .|    |    |    |     [Client.php:3169]
+8E73 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+8E73 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+8E73 .|    |    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+8E73 .|    |    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+8E73 .|    |    |    |    <= 'https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+8E73 .|    |    |    |    => CAS_Client::_readURL('https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F&ticket=ST-3-lmbOBtoaOVCrt0soUgfy-sso.ui.ac.id', NULL, NULL, NULL) [Client.php:3191]
+8E73 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+8E73 .|    |    |    |    |    |    Response Body: 
+8E73 .|    |    |    |    |    |    
+8E73 .|    |    |    |    |    |    
+8E73 .|    |    |    |    |    |    
+8E73 .|    |    |    |    |    |    
+8E73 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+8E73 .|    |    |    |    |    |    	<cas:authenticationSuccess>
+8E73 .|    |    |    |    |    |    		<cas:user>i.gde</cas:user>
+8E73 .|    |    |    |    |    |    
+8E73 .|    |    |    |    |    |    		<cas:attributes>
+8E73 .|    |    |    |    |    |    		    
+8E73 .|    |    |    |    |    |    			
+8E73 .|    |    |    |    |    |    			   
+8E73 .|    |    |    |    |    |    			   
+8E73 .|    |    |    |    |    |    			   
+8E73 .|    |    |    |    |    |    			   
+8E73 .|    |    |    |    |    |    				<cas:ldap_cn>I GDE DHARMA N</cas:ldap_cn>
+8E73 .|    |    |    |    |    |    			   
+8E73 .|    |    |    |    |    |    			
+8E73 .|    |    |    |    |    |    		    
+8E73 .|    |    |    |    |    |    			
+8E73 .|    |    |    |    |    |    			   
+8E73 .|    |    |    |    |    |    			   
+8E73 .|    |    |    |    |    |    			   
+8E73 .|    |    |    |    |    |    			   
+8E73 .|    |    |    |    |    |    				<cas:peran_user>staff</cas:peran_user>
+8E73 .|    |    |    |    |    |    			   
+8E73 .|    |    |    |    |    |    			
+8E73 .|    |    |    |    |    |    		    
+8E73 .|    |    |    |    |    |    			
+8E73 .|    |    |    |    |    |    			   
+8E73 .|    |    |    |    |    |    			   
+8E73 .|    |    |    |    |    |    			   
+8E73 .|    |    |    |    |    |    			   
+8E73 .|    |    |    |    |    |    				<cas:nip>100120310270012891</cas:nip>
+8E73 .|    |    |    |    |    |    			   
+8E73 .|    |    |    |    |    |    			
+8E73 .|    |    |    |    |    |    		    
+8E73 .|    |    |    |    |    |    			
+8E73 .|    |    |    |    |    |    			   
+8E73 .|    |    |    |    |    |    			   
+8E73 .|    |    |    |    |    |    			   
+8E73 .|    |    |    |    |    |    			   
+8E73 .|    |    |    |    |    |    				<cas:nama>I Gde Dharma Nugraha</cas:nama>
+8E73 .|    |    |    |    |    |    			   
+8E73 .|    |    |    |    |    |    			
+8E73 .|    |    |    |    |    |    		    
+8E73 .|    |    |    |    |    |    		</cas:attributes>
+8E73 .|    |    |    |    |    |    
+8E73 .|    |    |    |    |    |    
+8E73 .|    |    |    |    |    |    
+8E73 .|    |    |    |    |    |    	</cas:authenticationSuccess>
+8E73 .|    |    |    |    |    |    </cas:serviceResponse>
+8E73 .|    |    |    |    |    |    
+8E73 .|    |    |    |    |    |     [CurlRequest.php:84]
+8E73 .|    |    |    |    |    <= true
+8E73 .|    |    |    |    <= true
+8E73 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+8E73 .|    |    |    |    |    Found nested jasig style attributes [Client.php:3345]
+8E73 .|    |    |    |    |    Attribute [ldap_cn] = I GDE DHARMA N [Client.php:3352]
+8E73 .|    |    |    |    |    Attribute [peran_user] = staff [Client.php:3352]
+8E73 .|    |    |    |    |    Attribute [nip] = 100120310270012891 [Client.php:3352]
+8E73 .|    |    |    |    |    Attribute [nama] = I Gde Dharma Nugraha [Client.php:3352]
+8E73 .|    |    |    |    <= ''
+8E73 .|    |    |    |    Storing Proxy List [Client.php:3270]
+8E73 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+8E73 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+8E73 .|    |    |    |    <= true
+8E73 .|    |    |    <= true
+8E73 .|    |    |    CAS 2.0 ticket `ST-3-lmbOBtoaOVCrt0soUgfy-sso.ui.ac.id' was validated [Client.php:1453]
+8E73 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+8E73 .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+8E73 .|    |    |    Prepare redirect to : http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:1518]
+8E73 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+8E73 .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+8E73 .|    |    |    exit()
+8E73 .|    |    |    -
+8E73 .|    |    -
+8E73 .|    -
+706C .START (2020-12-04 22:23:20) phpCAS-1.3.6+ ****************** [CAS.php:468]
+706C .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+706C .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+706C .|    |    Session is authenticated as: i.gde [Client.php:936]
+706C .|    <= ''
+706C .<= ''
+706C .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+706C .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+706C .<= ''
+706C .=> phpCAS::forceAuthentication() [Cas.php:81]
+706C .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+706C .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+706C .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+706C .|    |    |    |    user = `i.gde' [Client.php:1622]
+706C .|    |    |    <= true
+706C .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+706C .|    |    <= true
+706C .|    |    no need to authenticate [Client.php:1282]
+706C .|    <= true
+706C .<= ''
+706C .=> phpCAS::isAuthenticated() [Cas.php:89]
+706C .|    => CAS_Client::isAuthenticated() [CAS.php:1145]
+706C .|    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+706C .|    |    |    user = `i.gde' [Client.php:1622]
+706C .|    |    <= true
+706C .|    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+706C .|    <= true
+706C .<= true
+9300 .START (2020-12-04 22:36:55) phpCAS-1.3.6+ ****************** [CAS.php:468]
+9300 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+9300 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+9300 .|    |    Session is authenticated as: i.gde [Client.php:936]
+9300 .|    <= ''
+9300 .<= ''
+9300 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+9300 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+9300 .<= ''
+9300 .=> phpCAS::forceAuthentication() [Cas.php:81]
+9300 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+9300 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+9300 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+9300 .|    |    |    |    user = `i.gde' [Client.php:1622]
+9300 .|    |    |    <= true
+9300 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+9300 .|    |    <= true
+9300 .|    |    no need to authenticate [Client.php:1282]
+9300 .|    <= true
+9300 .<= ''
+9300 .=> phpCAS::isAuthenticated() [Cas.php:89]
+9300 .|    => CAS_Client::isAuthenticated() [CAS.php:1145]
+9300 .|    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+9300 .|    |    |    user = `i.gde' [Client.php:1622]
+9300 .|    |    <= true
+9300 .|    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+9300 .|    <= true
+9300 .<= true
+073F .START (2020-12-04 22:47:57) phpCAS-1.3.6+ ****************** [CAS.php:468]
+073F .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+073F .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+073F .|    |    Session is authenticated as: i.gde [Client.php:936]
+073F .|    <= ''
+073F .<= ''
+073F .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+073F .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+073F .<= ''
+073F .=> phpCAS::forceAuthentication() [Cas.php:81]
+073F .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+073F .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+073F .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+073F .|    |    |    |    user = `i.gde' [Client.php:1622]
+073F .|    |    |    <= true
+073F .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+073F .|    |    <= true
+073F .|    |    no need to authenticate [Client.php:1282]
+073F .|    <= true
+073F .<= ''
+073F .=> phpCAS::isAuthenticated() [Cas.php:89]
+073F .|    => CAS_Client::isAuthenticated() [CAS.php:1145]
+073F .|    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+073F .|    |    |    user = `i.gde' [Client.php:1622]
+073F .|    |    <= true
+073F .|    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+073F .|    <= true
+073F .<= true
+6FE9 .START (2020-12-04 22:48:21) phpCAS-1.3.6+ ****************** [CAS.php:468]
+6FE9 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+6FE9 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+6FE9 .|    |    Session is not authenticated [Client.php:938]
+6FE9 .|    <= ''
+6FE9 .<= ''
+6FE9 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+6FE9 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+6FE9 .<= ''
+6FE9 .=> phpCAS::forceAuthentication() [Cas.php:81]
+6FE9 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+6FE9 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+6FE9 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+6FE9 .|    |    |    |    no user found [Client.php:1635]
+6FE9 .|    |    |    <= false
+6FE9 .|    |    |    no ticket found [Client.php:1494]
+6FE9 .|    |    <= false
+6FE9 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+6FE9 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+6FE9 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+6FE9 .|    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+6FE9 .|    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+6FE9 .|    |    |    <= 'https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+6FE9 .|    |    |    Redirect to : https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F [Client.php:1663]
+6FE9 .|    |    |    exit()
+6FE9 .|    |    |    -
+6FE9 .|    |    -
+6FE9 .|    -
+27FF .START (2020-12-04 22:48:22) phpCAS-1.3.6+ ****************** [CAS.php:468]
+27FF .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+27FF .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+27FF .|    |    Session is not authenticated [Client.php:938]
+27FF .|    |    Ticket 'ST-5-4rrm9lpQYIrferdIqJJI-sso.ui.ac.id' found [Client.php:1020]
+27FF .|    <= ''
+27FF .<= ''
+27FF .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+27FF .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+27FF .<= ''
+27FF .=> phpCAS::forceAuthentication() [Cas.php:81]
+27FF .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+27FF .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+27FF .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+27FF .|    |    |    |    no user found [Client.php:1635]
+27FF .|    |    |    <= false
+27FF .|    |    |    CAS 2.0 ticket `ST-5-4rrm9lpQYIrferdIqJJI-sso.ui.ac.id' is present [Client.php:1447]
+27FF .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+27FF .|    |    |    |     [Client.php:3169]
+27FF .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+27FF .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+27FF .|    |    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+27FF .|    |    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+27FF .|    |    |    |    <= 'https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+27FF .|    |    |    |    => CAS_Client::_readURL('https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F&ticket=ST-5-4rrm9lpQYIrferdIqJJI-sso.ui.ac.id', NULL, NULL, NULL) [Client.php:3191]
+27FF .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+27FF .|    |    |    |    |    |    Response Body: 
+27FF .|    |    |    |    |    |    
+27FF .|    |    |    |    |    |    
+27FF .|    |    |    |    |    |    
+27FF .|    |    |    |    |    |    
+27FF .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+27FF .|    |    |    |    |    |    	<cas:authenticationSuccess>
+27FF .|    |    |    |    |    |    		<cas:user>i.gde</cas:user>
+27FF .|    |    |    |    |    |    
+27FF .|    |    |    |    |    |    		<cas:attributes>
+27FF .|    |    |    |    |    |    		    
+27FF .|    |    |    |    |    |    			
+27FF .|    |    |    |    |    |    			   
+27FF .|    |    |    |    |    |    			   
+27FF .|    |    |    |    |    |    			   
+27FF .|    |    |    |    |    |    			   
+27FF .|    |    |    |    |    |    				<cas:ldap_cn>I GDE DHARMA N</cas:ldap_cn>
+27FF .|    |    |    |    |    |    			   
+27FF .|    |    |    |    |    |    			
+27FF .|    |    |    |    |    |    		    
+27FF .|    |    |    |    |    |    			
+27FF .|    |    |    |    |    |    			   
+27FF .|    |    |    |    |    |    			   
+27FF .|    |    |    |    |    |    			   
+27FF .|    |    |    |    |    |    			   
+27FF .|    |    |    |    |    |    				<cas:peran_user>staff</cas:peran_user>
+27FF .|    |    |    |    |    |    			   
+27FF .|    |    |    |    |    |    			
+27FF .|    |    |    |    |    |    		    
+27FF .|    |    |    |    |    |    			
+27FF .|    |    |    |    |    |    			   
+27FF .|    |    |    |    |    |    			   
+27FF .|    |    |    |    |    |    			   
+27FF .|    |    |    |    |    |    			   
+27FF .|    |    |    |    |    |    				<cas:nip>100120310270012891</cas:nip>
+27FF .|    |    |    |    |    |    			   
+27FF .|    |    |    |    |    |    			
+27FF .|    |    |    |    |    |    		    
+27FF .|    |    |    |    |    |    			
+27FF .|    |    |    |    |    |    			   
+27FF .|    |    |    |    |    |    			   
+27FF .|    |    |    |    |    |    			   
+27FF .|    |    |    |    |    |    			   
+27FF .|    |    |    |    |    |    				<cas:nama>I Gde Dharma Nugraha</cas:nama>
+27FF .|    |    |    |    |    |    			   
+27FF .|    |    |    |    |    |    			
+27FF .|    |    |    |    |    |    		    
+27FF .|    |    |    |    |    |    		</cas:attributes>
+27FF .|    |    |    |    |    |    
+27FF .|    |    |    |    |    |    
+27FF .|    |    |    |    |    |    
+27FF .|    |    |    |    |    |    	</cas:authenticationSuccess>
+27FF .|    |    |    |    |    |    </cas:serviceResponse>
+27FF .|    |    |    |    |    |    
+27FF .|    |    |    |    |    |     [CurlRequest.php:84]
+27FF .|    |    |    |    |    <= true
+27FF .|    |    |    |    <= true
+27FF .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+27FF .|    |    |    |    |    Found nested jasig style attributes [Client.php:3345]
+27FF .|    |    |    |    |    Attribute [ldap_cn] = I GDE DHARMA N [Client.php:3352]
+27FF .|    |    |    |    |    Attribute [peran_user] = staff [Client.php:3352]
+27FF .|    |    |    |    |    Attribute [nip] = 100120310270012891 [Client.php:3352]
+27FF .|    |    |    |    |    Attribute [nama] = I Gde Dharma Nugraha [Client.php:3352]
+27FF .|    |    |    |    <= ''
+27FF .|    |    |    |    Storing Proxy List [Client.php:3270]
+27FF .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+27FF .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+27FF .|    |    |    |    <= true
+27FF .|    |    |    <= true
+27FF .|    |    |    CAS 2.0 ticket `ST-5-4rrm9lpQYIrferdIqJJI-sso.ui.ac.id' was validated [Client.php:1453]
+27FF .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+27FF .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+27FF .|    |    |    Prepare redirect to : http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:1518]
+27FF .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+27FF .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+27FF .|    |    |    exit()
+27FF .|    |    |    -
+27FF .|    |    -
+27FF .|    -
+892A .START (2020-12-04 22:48:22) phpCAS-1.3.6+ ****************** [CAS.php:468]
+892A .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+892A .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+892A .|    |    Session is authenticated as: i.gde [Client.php:936]
+892A .|    <= ''
+892A .<= ''
+892A .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+892A .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+892A .<= ''
+892A .=> phpCAS::forceAuthentication() [Cas.php:81]
+892A .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+892A .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+892A .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+892A .|    |    |    |    user = `i.gde' [Client.php:1622]
+892A .|    |    |    <= true
+892A .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+892A .|    |    <= true
+892A .|    |    no need to authenticate [Client.php:1282]
+892A .|    <= true
+892A .<= ''
+892A .=> phpCAS::isAuthenticated() [Cas.php:89]
+892A .|    => CAS_Client::isAuthenticated() [CAS.php:1145]
+892A .|    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+892A .|    |    |    user = `i.gde' [Client.php:1622]
+892A .|    |    <= true
+892A .|    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+892A .|    <= true
+892A .<= true
+C6DC .START (2020-12-04 22:48:25) phpCAS-1.3.6+ ****************** [CAS.php:468]
+C6DC .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+C6DC .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+C6DC .|    |    Starting a new session qgl04e7vrq7bsg1hk3lfkl8bd3kpjjb7 [Client.php:932]
+C6DC .|    |    Session is not authenticated [Client.php:938]
+C6DC .|    <= ''
+C6DC .<= ''
+C6DC .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+C6DC .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+C6DC .<= ''
+C6DC .=> phpCAS::logoutWithRedirectService('http://localhost/accreditation/') [Cas.php:109]
+C6DC .|    => CAS_Client::logout(array (  'service' => 'http://localhost/accreditation/',)) [CAS.php:1472]
+C6DC .|    |    Prepare redirect to : https://sso.ui.ac.id/cas2/logout?service=http%3A%2F%2Flocalhost%2Faccreditation%2F [Client.php:1696]
+C6DC .|    |    Destroying session : qgl04e7vrq7bsg1hk3lfkl8bd3kpjjb7 [Client.php:1698]
+C6DC .|    |    Session terminated [Client.php:1702]
+C6DC .|    |    exit()
+C6DC .|    |    -
+C6DC .|    -
+FF78 .START (2020-12-04 22:50:04) phpCAS-1.3.6+ ****************** [CAS.php:468]
+FF78 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+FF78 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+FF78 .|    |    Session is not authenticated [Client.php:938]
+FF78 .|    <= ''
+FF78 .<= ''
+FF78 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+FF78 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+FF78 .<= ''
+FF78 .=> phpCAS::forceAuthentication() [Cas.php:81]
+FF78 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+FF78 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+FF78 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+FF78 .|    |    |    |    no user found [Client.php:1635]
+FF78 .|    |    |    <= false
+FF78 .|    |    |    no ticket found [Client.php:1494]
+FF78 .|    |    <= false
+FF78 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+FF78 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+FF78 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+FF78 .|    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+FF78 .|    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+FF78 .|    |    |    <= 'https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+FF78 .|    |    |    Redirect to : https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F [Client.php:1663]
+FF78 .|    |    |    exit()
+FF78 .|    |    |    -
+FF78 .|    |    -
+FF78 .|    -
+5521 .START (2020-12-04 22:50:17) phpCAS-1.3.6+ ****************** [CAS.php:468]
+5521 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+5521 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+5521 .|    |    Session is not authenticated [Client.php:938]
+5521 .|    |    Ticket 'ST-6-XDyy6bgzd57WIGsN97kF-sso.ui.ac.id' found [Client.php:1020]
+5521 .|    <= ''
+5521 .<= ''
+5521 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+5521 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+5521 .<= ''
+5521 .=> phpCAS::forceAuthentication() [Cas.php:81]
+5521 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+5521 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+5521 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+5521 .|    |    |    |    no user found [Client.php:1635]
+5521 .|    |    |    <= false
+5521 .|    |    |    CAS 2.0 ticket `ST-6-XDyy6bgzd57WIGsN97kF-sso.ui.ac.id' is present [Client.php:1447]
+5521 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+5521 .|    |    |    |     [Client.php:3169]
+5521 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+5521 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+5521 .|    |    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+5521 .|    |    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+5521 .|    |    |    |    <= 'https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+5521 .|    |    |    |    => CAS_Client::_readURL('https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F&ticket=ST-6-XDyy6bgzd57WIGsN97kF-sso.ui.ac.id', NULL, NULL, NULL) [Client.php:3191]
+5521 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+5521 .|    |    |    |    |    |    Response Body: 
+5521 .|    |    |    |    |    |    
+5521 .|    |    |    |    |    |    
+5521 .|    |    |    |    |    |    
+5521 .|    |    |    |    |    |    
+5521 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+5521 .|    |    |    |    |    |    	<cas:authenticationSuccess>
+5521 .|    |    |    |    |    |    		<cas:user>i.gde</cas:user>
+5521 .|    |    |    |    |    |    
+5521 .|    |    |    |    |    |    		<cas:attributes>
+5521 .|    |    |    |    |    |    		    
+5521 .|    |    |    |    |    |    			
+5521 .|    |    |    |    |    |    			   
+5521 .|    |    |    |    |    |    			   
+5521 .|    |    |    |    |    |    			   
+5521 .|    |    |    |    |    |    			   
+5521 .|    |    |    |    |    |    				<cas:ldap_cn>I GDE DHARMA N</cas:ldap_cn>
+5521 .|    |    |    |    |    |    			   
+5521 .|    |    |    |    |    |    			
+5521 .|    |    |    |    |    |    		    
+5521 .|    |    |    |    |    |    			
+5521 .|    |    |    |    |    |    			   
+5521 .|    |    |    |    |    |    			   
+5521 .|    |    |    |    |    |    			   
+5521 .|    |    |    |    |    |    			   
+5521 .|    |    |    |    |    |    				<cas:peran_user>staff</cas:peran_user>
+5521 .|    |    |    |    |    |    			   
+5521 .|    |    |    |    |    |    			
+5521 .|    |    |    |    |    |    		    
+5521 .|    |    |    |    |    |    			
+5521 .|    |    |    |    |    |    			   
+5521 .|    |    |    |    |    |    			   
+5521 .|    |    |    |    |    |    			   
+5521 .|    |    |    |    |    |    			   
+5521 .|    |    |    |    |    |    				<cas:nip>100120310270012891</cas:nip>
+5521 .|    |    |    |    |    |    			   
+5521 .|    |    |    |    |    |    			
+5521 .|    |    |    |    |    |    		    
+5521 .|    |    |    |    |    |    			
+5521 .|    |    |    |    |    |    			   
+5521 .|    |    |    |    |    |    			   
+5521 .|    |    |    |    |    |    			   
+5521 .|    |    |    |    |    |    			   
+5521 .|    |    |    |    |    |    				<cas:nama>I Gde Dharma Nugraha</cas:nama>
+5521 .|    |    |    |    |    |    			   
+5521 .|    |    |    |    |    |    			
+5521 .|    |    |    |    |    |    		    
+5521 .|    |    |    |    |    |    		</cas:attributes>
+5521 .|    |    |    |    |    |    
+5521 .|    |    |    |    |    |    
+5521 .|    |    |    |    |    |    
+5521 .|    |    |    |    |    |    	</cas:authenticationSuccess>
+5521 .|    |    |    |    |    |    </cas:serviceResponse>
+5521 .|    |    |    |    |    |    
+5521 .|    |    |    |    |    |     [CurlRequest.php:84]
+5521 .|    |    |    |    |    <= true
+5521 .|    |    |    |    <= true
+5521 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+5521 .|    |    |    |    |    Found nested jasig style attributes [Client.php:3345]
+5521 .|    |    |    |    |    Attribute [ldap_cn] = I GDE DHARMA N [Client.php:3352]
+5521 .|    |    |    |    |    Attribute [peran_user] = staff [Client.php:3352]
+5521 .|    |    |    |    |    Attribute [nip] = 100120310270012891 [Client.php:3352]
+5521 .|    |    |    |    |    Attribute [nama] = I Gde Dharma Nugraha [Client.php:3352]
+5521 .|    |    |    |    <= ''
+5521 .|    |    |    |    Storing Proxy List [Client.php:3270]
+5521 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+5521 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+5521 .|    |    |    |    <= true
+5521 .|    |    |    <= true
+5521 .|    |    |    CAS 2.0 ticket `ST-6-XDyy6bgzd57WIGsN97kF-sso.ui.ac.id' was validated [Client.php:1453]
+5521 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+5521 .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+5521 .|    |    |    Prepare redirect to : http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:1518]
+5521 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+5521 .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+5521 .|    |    |    exit()
+5521 .|    |    |    -
+5521 .|    |    -
+5521 .|    -
+C8EA .START (2020-12-04 22:50:17) phpCAS-1.3.6+ ****************** [CAS.php:468]
+C8EA .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+C8EA .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+C8EA .|    |    Session is authenticated as: i.gde [Client.php:936]
+C8EA .|    <= ''
+C8EA .<= ''
+C8EA .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+C8EA .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+C8EA .<= ''
+C8EA .=> phpCAS::forceAuthentication() [Cas.php:81]
+C8EA .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+C8EA .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+C8EA .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+C8EA .|    |    |    |    user = `i.gde' [Client.php:1622]
+C8EA .|    |    |    <= true
+C8EA .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+C8EA .|    |    <= true
+C8EA .|    |    no need to authenticate [Client.php:1282]
+C8EA .|    <= true
+C8EA .<= ''
+C8EA .=> phpCAS::isAuthenticated() [Cas.php:89]
+C8EA .|    => CAS_Client::isAuthenticated() [CAS.php:1145]
+C8EA .|    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+C8EA .|    |    |    user = `i.gde' [Client.php:1622]
+C8EA .|    |    <= true
+C8EA .|    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+C8EA .|    <= true
+C8EA .<= true
+73F3 .START (2020-12-04 22:50:21) phpCAS-1.3.6+ ****************** [CAS.php:468]
+73F3 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+73F3 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+73F3 .|    |    Starting a new session 5ng32fkfg3jqlbpf9klhmkvq7fs4b8od [Client.php:932]
+73F3 .|    |    Session is not authenticated [Client.php:938]
+73F3 .|    <= ''
+73F3 .<= ''
+73F3 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+73F3 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+73F3 .<= ''
+73F3 .=> phpCAS::logoutWithRedirectService('http://localhost/accreditation/') [Cas.php:109]
+73F3 .|    => CAS_Client::logout(array (  'service' => 'http://localhost/accreditation/',)) [CAS.php:1472]
+73F3 .|    |    Prepare redirect to : https://sso.ui.ac.id/cas2/logout?service=http%3A%2F%2Flocalhost%2Faccreditation%2F [Client.php:1696]
+73F3 .|    |    Destroying session : 5ng32fkfg3jqlbpf9klhmkvq7fs4b8od [Client.php:1698]
+73F3 .|    |    Session terminated [Client.php:1702]
+73F3 .|    |    exit()
+73F3 .|    |    -
+73F3 .|    -
+3CCF .START (2020-12-04 22:52:19) phpCAS-1.3.6+ ****************** [CAS.php:468]
+3CCF .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+3CCF .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+3CCF .|    |    Session is not authenticated [Client.php:938]
+3CCF .|    <= ''
+3CCF .<= ''
+3CCF .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+3CCF .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+3CCF .<= ''
+3CCF .=> phpCAS::forceAuthentication() [Cas.php:81]
+3CCF .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+3CCF .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+3CCF .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+3CCF .|    |    |    |    no user found [Client.php:1635]
+3CCF .|    |    |    <= false
+3CCF .|    |    |    no ticket found [Client.php:1494]
+3CCF .|    |    <= false
+3CCF .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+3CCF .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+3CCF .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+3CCF .|    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+3CCF .|    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+3CCF .|    |    |    <= 'https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+3CCF .|    |    |    Redirect to : https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F [Client.php:1663]
+3CCF .|    |    |    exit()
+3CCF .|    |    |    -
+3CCF .|    |    -
+3CCF .|    -
+9261 .START (2020-12-04 22:52:33) phpCAS-1.3.6+ ****************** [CAS.php:468]
+9261 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+9261 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+9261 .|    |    Session is not authenticated [Client.php:938]
+9261 .|    |    Ticket 'ST-7-6c2365XSTCsWG2yWzKpA-sso.ui.ac.id' found [Client.php:1020]
+9261 .|    <= ''
+9261 .<= ''
+9261 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+9261 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+9261 .<= ''
+9261 .=> phpCAS::forceAuthentication() [Cas.php:81]
+9261 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+9261 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+9261 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+9261 .|    |    |    |    no user found [Client.php:1635]
+9261 .|    |    |    <= false
+9261 .|    |    |    CAS 2.0 ticket `ST-7-6c2365XSTCsWG2yWzKpA-sso.ui.ac.id' is present [Client.php:1447]
+9261 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+9261 .|    |    |    |     [Client.php:3169]
+9261 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+9261 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+9261 .|    |    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+9261 .|    |    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+9261 .|    |    |    |    <= 'https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+9261 .|    |    |    |    => CAS_Client::_readURL('https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F&ticket=ST-7-6c2365XSTCsWG2yWzKpA-sso.ui.ac.id', NULL, NULL, NULL) [Client.php:3191]
+9261 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+9261 .|    |    |    |    |    |    Response Body: 
+9261 .|    |    |    |    |    |    
+9261 .|    |    |    |    |    |    
+9261 .|    |    |    |    |    |    
+9261 .|    |    |    |    |    |    
+9261 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+9261 .|    |    |    |    |    |    	<cas:authenticationSuccess>
+9261 .|    |    |    |    |    |    		<cas:user>i.gde</cas:user>
+9261 .|    |    |    |    |    |    
+9261 .|    |    |    |    |    |    		<cas:attributes>
+9261 .|    |    |    |    |    |    		    
+9261 .|    |    |    |    |    |    			
+9261 .|    |    |    |    |    |    			   
+9261 .|    |    |    |    |    |    			   
+9261 .|    |    |    |    |    |    			   
+9261 .|    |    |    |    |    |    			   
+9261 .|    |    |    |    |    |    				<cas:ldap_cn>I GDE DHARMA N</cas:ldap_cn>
+9261 .|    |    |    |    |    |    			   
+9261 .|    |    |    |    |    |    			
+9261 .|    |    |    |    |    |    		    
+9261 .|    |    |    |    |    |    			
+9261 .|    |    |    |    |    |    			   
+9261 .|    |    |    |    |    |    			   
+9261 .|    |    |    |    |    |    			   
+9261 .|    |    |    |    |    |    			   
+9261 .|    |    |    |    |    |    				<cas:peran_user>staff</cas:peran_user>
+9261 .|    |    |    |    |    |    			   
+9261 .|    |    |    |    |    |    			
+9261 .|    |    |    |    |    |    		    
+9261 .|    |    |    |    |    |    			
+9261 .|    |    |    |    |    |    			   
+9261 .|    |    |    |    |    |    			   
+9261 .|    |    |    |    |    |    			   
+9261 .|    |    |    |    |    |    			   
+9261 .|    |    |    |    |    |    				<cas:nip>100120310270012891</cas:nip>
+9261 .|    |    |    |    |    |    			   
+9261 .|    |    |    |    |    |    			
+9261 .|    |    |    |    |    |    		    
+9261 .|    |    |    |    |    |    			
+9261 .|    |    |    |    |    |    			   
+9261 .|    |    |    |    |    |    			   
+9261 .|    |    |    |    |    |    			   
+9261 .|    |    |    |    |    |    			   
+9261 .|    |    |    |    |    |    				<cas:nama>I Gde Dharma Nugraha</cas:nama>
+9261 .|    |    |    |    |    |    			   
+9261 .|    |    |    |    |    |    			
+9261 .|    |    |    |    |    |    		    
+9261 .|    |    |    |    |    |    		</cas:attributes>
+9261 .|    |    |    |    |    |    
+9261 .|    |    |    |    |    |    
+9261 .|    |    |    |    |    |    
+9261 .|    |    |    |    |    |    	</cas:authenticationSuccess>
+9261 .|    |    |    |    |    |    </cas:serviceResponse>
+9261 .|    |    |    |    |    |    
+9261 .|    |    |    |    |    |     [CurlRequest.php:84]
+9261 .|    |    |    |    |    <= true
+9261 .|    |    |    |    <= true
+9261 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+9261 .|    |    |    |    |    Found nested jasig style attributes [Client.php:3345]
+9261 .|    |    |    |    |    Attribute [ldap_cn] = I GDE DHARMA N [Client.php:3352]
+9261 .|    |    |    |    |    Attribute [peran_user] = staff [Client.php:3352]
+9261 .|    |    |    |    |    Attribute [nip] = 100120310270012891 [Client.php:3352]
+9261 .|    |    |    |    |    Attribute [nama] = I Gde Dharma Nugraha [Client.php:3352]
+9261 .|    |    |    |    <= ''
+9261 .|    |    |    |    Storing Proxy List [Client.php:3270]
+9261 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+9261 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+9261 .|    |    |    |    <= true
+9261 .|    |    |    <= true
+9261 .|    |    |    CAS 2.0 ticket `ST-7-6c2365XSTCsWG2yWzKpA-sso.ui.ac.id' was validated [Client.php:1453]
+9261 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+9261 .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+9261 .|    |    |    Prepare redirect to : http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:1518]
+9261 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+9261 .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+9261 .|    |    |    exit()
+9261 .|    |    |    -
+9261 .|    |    -
+9261 .|    -
+B3A7 .START (2020-12-04 22:52:33) phpCAS-1.3.6+ ****************** [CAS.php:468]
+B3A7 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+B3A7 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+B3A7 .|    |    Session is authenticated as: i.gde [Client.php:936]
+B3A7 .|    <= ''
+B3A7 .<= ''
+B3A7 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+B3A7 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+B3A7 .<= ''
+B3A7 .=> phpCAS::forceAuthentication() [Cas.php:81]
+B3A7 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+B3A7 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+B3A7 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+B3A7 .|    |    |    |    user = `i.gde' [Client.php:1622]
+B3A7 .|    |    |    <= true
+B3A7 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+B3A7 .|    |    <= true
+B3A7 .|    |    no need to authenticate [Client.php:1282]
+B3A7 .|    <= true
+B3A7 .<= ''
+B3A7 .=> phpCAS::isAuthenticated() [Cas.php:89]
+B3A7 .|    => CAS_Client::isAuthenticated() [CAS.php:1145]
+B3A7 .|    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+B3A7 .|    |    |    user = `i.gde' [Client.php:1622]
+B3A7 .|    |    <= true
+B3A7 .|    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+B3A7 .|    <= true
+B3A7 .<= true
+1364 .START (2020-12-04 22:52:35) phpCAS-1.3.6+ ****************** [CAS.php:468]
+1364 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+1364 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+1364 .|    |    Starting a new session 8pvifp746ebooicfc63ggi15p5djl1aq [Client.php:932]
+1364 .|    |    Session is not authenticated [Client.php:938]
+1364 .|    <= ''
+1364 .<= ''
+1364 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+1364 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+1364 .<= ''
+1364 .=> phpCAS::logoutWithRedirectService('http://localhost/accreditation/dashboard') [Cas.php:109]
+1364 .|    => CAS_Client::logout(array (  'service' => 'http://localhost/accreditation/dashboard',)) [CAS.php:1472]
+1364 .|    |    Prepare redirect to : https://sso.ui.ac.id/cas2/logout?service=http%3A%2F%2Flocalhost%2Faccreditation%2Fdashboard [Client.php:1696]
+1364 .|    |    Destroying session : 8pvifp746ebooicfc63ggi15p5djl1aq [Client.php:1698]
+1364 .|    |    Session terminated [Client.php:1702]
+1364 .|    |    exit()
+1364 .|    |    -
+1364 .|    -
+26F1 .START (2020-12-04 22:53:50) phpCAS-1.3.6+ ****************** [CAS.php:468]
+26F1 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+26F1 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+26F1 .|    |    Session is not authenticated [Client.php:938]
+26F1 .|    <= ''
+26F1 .<= ''
+26F1 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+26F1 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+26F1 .<= ''
+26F1 .=> phpCAS::forceAuthentication() [Cas.php:81]
+26F1 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+26F1 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+26F1 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+26F1 .|    |    |    |    no user found [Client.php:1635]
+26F1 .|    |    |    <= false
+26F1 .|    |    |    no ticket found [Client.php:1494]
+26F1 .|    |    <= false
+26F1 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+26F1 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+26F1 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+26F1 .|    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+26F1 .|    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+26F1 .|    |    |    <= 'https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+26F1 .|    |    |    Redirect to : https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F [Client.php:1663]
+26F1 .|    |    |    exit()
+26F1 .|    |    |    -
+26F1 .|    |    -
+26F1 .|    -
+BB93 .START (2020-12-04 22:54:00) phpCAS-1.3.6+ ****************** [CAS.php:468]
+BB93 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+BB93 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+BB93 .|    |    Session is not authenticated [Client.php:938]
+BB93 .|    |    Ticket 'ST-9-z5wwYhbwCejhvIU6hd6u-sso.ui.ac.id' found [Client.php:1020]
+BB93 .|    <= ''
+BB93 .<= ''
+BB93 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+BB93 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+BB93 .<= ''
+BB93 .=> phpCAS::forceAuthentication() [Cas.php:81]
+BB93 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+BB93 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+BB93 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+BB93 .|    |    |    |    no user found [Client.php:1635]
+BB93 .|    |    |    <= false
+BB93 .|    |    |    CAS 2.0 ticket `ST-9-z5wwYhbwCejhvIU6hd6u-sso.ui.ac.id' is present [Client.php:1447]
+BB93 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+BB93 .|    |    |    |     [Client.php:3169]
+BB93 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+BB93 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+BB93 .|    |    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+BB93 .|    |    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+BB93 .|    |    |    |    <= 'https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+BB93 .|    |    |    |    => CAS_Client::_readURL('https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F&ticket=ST-9-z5wwYhbwCejhvIU6hd6u-sso.ui.ac.id', NULL, NULL, NULL) [Client.php:3191]
+BB93 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+BB93 .|    |    |    |    |    |    Response Body: 
+BB93 .|    |    |    |    |    |    
+BB93 .|    |    |    |    |    |    
+BB93 .|    |    |    |    |    |    
+BB93 .|    |    |    |    |    |    
+BB93 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+BB93 .|    |    |    |    |    |    	<cas:authenticationSuccess>
+BB93 .|    |    |    |    |    |    		<cas:user>i.gde</cas:user>
+BB93 .|    |    |    |    |    |    
+BB93 .|    |    |    |    |    |    		<cas:attributes>
+BB93 .|    |    |    |    |    |    		    
+BB93 .|    |    |    |    |    |    			
+BB93 .|    |    |    |    |    |    			   
+BB93 .|    |    |    |    |    |    			   
+BB93 .|    |    |    |    |    |    			   
+BB93 .|    |    |    |    |    |    			   
+BB93 .|    |    |    |    |    |    				<cas:ldap_cn>I GDE DHARMA N</cas:ldap_cn>
+BB93 .|    |    |    |    |    |    			   
+BB93 .|    |    |    |    |    |    			
+BB93 .|    |    |    |    |    |    		    
+BB93 .|    |    |    |    |    |    			
+BB93 .|    |    |    |    |    |    			   
+BB93 .|    |    |    |    |    |    			   
+BB93 .|    |    |    |    |    |    			   
+BB93 .|    |    |    |    |    |    			   
+BB93 .|    |    |    |    |    |    				<cas:peran_user>staff</cas:peran_user>
+BB93 .|    |    |    |    |    |    			   
+BB93 .|    |    |    |    |    |    			
+BB93 .|    |    |    |    |    |    		    
+BB93 .|    |    |    |    |    |    			
+BB93 .|    |    |    |    |    |    			   
+BB93 .|    |    |    |    |    |    			   
+BB93 .|    |    |    |    |    |    			   
+BB93 .|    |    |    |    |    |    			   
+BB93 .|    |    |    |    |    |    				<cas:nip>100120310270012891</cas:nip>
+BB93 .|    |    |    |    |    |    			   
+BB93 .|    |    |    |    |    |    			
+BB93 .|    |    |    |    |    |    		    
+BB93 .|    |    |    |    |    |    			
+BB93 .|    |    |    |    |    |    			   
+BB93 .|    |    |    |    |    |    			   
+BB93 .|    |    |    |    |    |    			   
+BB93 .|    |    |    |    |    |    			   
+BB93 .|    |    |    |    |    |    				<cas:nama>I Gde Dharma Nugraha</cas:nama>
+BB93 .|    |    |    |    |    |    			   
+BB93 .|    |    |    |    |    |    			
+BB93 .|    |    |    |    |    |    		    
+BB93 .|    |    |    |    |    |    		</cas:attributes>
+BB93 .|    |    |    |    |    |    
+BB93 .|    |    |    |    |    |    
+BB93 .|    |    |    |    |    |    
+BB93 .|    |    |    |    |    |    	</cas:authenticationSuccess>
+BB93 .|    |    |    |    |    |    </cas:serviceResponse>
+BB93 .|    |    |    |    |    |    
+BB93 .|    |    |    |    |    |     [CurlRequest.php:84]
+BB93 .|    |    |    |    |    <= true
+BB93 .|    |    |    |    <= true
+BB93 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+BB93 .|    |    |    |    |    Found nested jasig style attributes [Client.php:3345]
+BB93 .|    |    |    |    |    Attribute [ldap_cn] = I GDE DHARMA N [Client.php:3352]
+BB93 .|    |    |    |    |    Attribute [peran_user] = staff [Client.php:3352]
+BB93 .|    |    |    |    |    Attribute [nip] = 100120310270012891 [Client.php:3352]
+BB93 .|    |    |    |    |    Attribute [nama] = I Gde Dharma Nugraha [Client.php:3352]
+BB93 .|    |    |    |    <= ''
+BB93 .|    |    |    |    Storing Proxy List [Client.php:3270]
+BB93 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+BB93 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+BB93 .|    |    |    |    <= true
+BB93 .|    |    |    <= true
+BB93 .|    |    |    CAS 2.0 ticket `ST-9-z5wwYhbwCejhvIU6hd6u-sso.ui.ac.id' was validated [Client.php:1453]
+BB93 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+BB93 .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+BB93 .|    |    |    Prepare redirect to : http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:1518]
+BB93 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+BB93 .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+BB93 .|    |    |    exit()
+BB93 .|    |    |    -
+BB93 .|    |    -
+BB93 .|    -
+4A57 .START (2020-12-04 22:54:01) phpCAS-1.3.6+ ****************** [CAS.php:468]
+4A57 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+4A57 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+4A57 .|    |    Session is authenticated as: i.gde [Client.php:936]
+4A57 .|    <= ''
+4A57 .<= ''
+4A57 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+4A57 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+4A57 .<= ''
+4A57 .=> phpCAS::forceAuthentication() [Cas.php:81]
+4A57 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+4A57 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+4A57 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+4A57 .|    |    |    |    user = `i.gde' [Client.php:1622]
+4A57 .|    |    |    <= true
+4A57 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+4A57 .|    |    <= true
+4A57 .|    |    no need to authenticate [Client.php:1282]
+4A57 .|    <= true
+4A57 .<= ''
+4A57 .=> phpCAS::isAuthenticated() [Cas.php:89]
+4A57 .|    => CAS_Client::isAuthenticated() [CAS.php:1145]
+4A57 .|    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+4A57 .|    |    |    user = `i.gde' [Client.php:1622]
+4A57 .|    |    <= true
+4A57 .|    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+4A57 .|    <= true
+4A57 .<= true
+022F .START (2020-12-04 22:54:07) phpCAS-1.3.6+ ****************** [CAS.php:468]
+022F .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+022F .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+022F .|    |    Starting a new session 4f9p8efius2uv17fh5vpcth9el4tr1ld [Client.php:932]
+022F .|    |    Session is not authenticated [Client.php:938]
+022F .|    <= ''
+022F .<= ''
+022F .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+022F .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+022F .<= ''
+022F .=> phpCAS::logoutWithRedirectService('http://localhost/accreditation/dashboard') [Cas.php:109]
+022F .|    => CAS_Client::logout(array (  'service' => 'http://localhost/accreditation/dashboard',)) [CAS.php:1472]
+022F .|    |    Prepare redirect to : https://sso.ui.ac.id/cas2/logout?service=http%3A%2F%2Flocalhost%2Faccreditation%2Fdashboard [Client.php:1696]
+022F .|    |    Destroying session : 4f9p8efius2uv17fh5vpcth9el4tr1ld [Client.php:1698]
+022F .|    |    Session terminated [Client.php:1702]
+022F .|    |    exit()
+022F .|    |    -
+022F .|    -
+FD00 .START (2020-12-04 23:31:57) phpCAS-1.3.6+ ****************** [CAS.php:468]
+FD00 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+FD00 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+FD00 .|    |    Session is not authenticated [Client.php:938]
+FD00 .|    <= ''
+FD00 .<= ''
+FD00 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+FD00 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+FD00 .<= ''
+FD00 .=> phpCAS::forceAuthentication() [Cas.php:81]
+FD00 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+FD00 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+FD00 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+FD00 .|    |    |    |    no user found [Client.php:1635]
+FD00 .|    |    |    <= false
+FD00 .|    |    |    no ticket found [Client.php:1494]
+FD00 .|    |    <= false
+FD00 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+FD00 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+FD00 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+FD00 .|    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+FD00 .|    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+FD00 .|    |    |    <= 'https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+FD00 .|    |    |    Redirect to : https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F [Client.php:1663]
+FD00 .|    |    |    exit()
+FD00 .|    |    |    -
+FD00 .|    |    -
+FD00 .|    -
+0ECB .START (2020-12-04 23:32:07) phpCAS-1.3.6+ ****************** [CAS.php:468]
+0ECB .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+0ECB .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+0ECB .|    |    Session is not authenticated [Client.php:938]
+0ECB .|    |    Ticket 'ST-22-ZNWkxXXyonTtZPoA54Cp-sso.ui.ac.id' found [Client.php:1020]
+0ECB .|    <= ''
+0ECB .<= ''
+0ECB .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+0ECB .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+0ECB .<= ''
+0ECB .=> phpCAS::forceAuthentication() [Cas.php:81]
+0ECB .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+0ECB .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+0ECB .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+0ECB .|    |    |    |    no user found [Client.php:1635]
+0ECB .|    |    |    <= false
+0ECB .|    |    |    CAS 2.0 ticket `ST-22-ZNWkxXXyonTtZPoA54Cp-sso.ui.ac.id' is present [Client.php:1447]
+0ECB .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+0ECB .|    |    |    |     [Client.php:3169]
+0ECB .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+0ECB .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+0ECB .|    |    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+0ECB .|    |    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+0ECB .|    |    |    |    <= 'https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+0ECB .|    |    |    |    => CAS_Client::_readURL('https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F&ticket=ST-22-ZNWkxXXyonTtZPoA54Cp-sso.ui.ac.id', NULL, NULL, NULL) [Client.php:3191]
+0ECB .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+0ECB .|    |    |    |    |    |    Response Body: 
+0ECB .|    |    |    |    |    |    
+0ECB .|    |    |    |    |    |    
+0ECB .|    |    |    |    |    |    
+0ECB .|    |    |    |    |    |    
+0ECB .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+0ECB .|    |    |    |    |    |    	<cas:authenticationSuccess>
+0ECB .|    |    |    |    |    |    		<cas:user>i.gde</cas:user>
+0ECB .|    |    |    |    |    |    
+0ECB .|    |    |    |    |    |    		<cas:attributes>
+0ECB .|    |    |    |    |    |    		    
+0ECB .|    |    |    |    |    |    			
+0ECB .|    |    |    |    |    |    			   
+0ECB .|    |    |    |    |    |    			   
+0ECB .|    |    |    |    |    |    			   
+0ECB .|    |    |    |    |    |    			   
+0ECB .|    |    |    |    |    |    				<cas:ldap_cn>I GDE DHARMA N</cas:ldap_cn>
+0ECB .|    |    |    |    |    |    			   
+0ECB .|    |    |    |    |    |    			
+0ECB .|    |    |    |    |    |    		    
+0ECB .|    |    |    |    |    |    			
+0ECB .|    |    |    |    |    |    			   
+0ECB .|    |    |    |    |    |    			   
+0ECB .|    |    |    |    |    |    			   
+0ECB .|    |    |    |    |    |    			   
+0ECB .|    |    |    |    |    |    				<cas:peran_user>staff</cas:peran_user>
+0ECB .|    |    |    |    |    |    			   
+0ECB .|    |    |    |    |    |    			
+0ECB .|    |    |    |    |    |    		    
+0ECB .|    |    |    |    |    |    			
+0ECB .|    |    |    |    |    |    			   
+0ECB .|    |    |    |    |    |    			   
+0ECB .|    |    |    |    |    |    			   
+0ECB .|    |    |    |    |    |    			   
+0ECB .|    |    |    |    |    |    				<cas:nip>100120310270012891</cas:nip>
+0ECB .|    |    |    |    |    |    			   
+0ECB .|    |    |    |    |    |    			
+0ECB .|    |    |    |    |    |    		    
+0ECB .|    |    |    |    |    |    			
+0ECB .|    |    |    |    |    |    			   
+0ECB .|    |    |    |    |    |    			   
+0ECB .|    |    |    |    |    |    			   
+0ECB .|    |    |    |    |    |    			   
+0ECB .|    |    |    |    |    |    				<cas:nama>I Gde Dharma Nugraha</cas:nama>
+0ECB .|    |    |    |    |    |    			   
+0ECB .|    |    |    |    |    |    			
+0ECB .|    |    |    |    |    |    		    
+0ECB .|    |    |    |    |    |    		</cas:attributes>
+0ECB .|    |    |    |    |    |    
+0ECB .|    |    |    |    |    |    
+0ECB .|    |    |    |    |    |    
+0ECB .|    |    |    |    |    |    	</cas:authenticationSuccess>
+0ECB .|    |    |    |    |    |    </cas:serviceResponse>
+0ECB .|    |    |    |    |    |    
+0ECB .|    |    |    |    |    |     [CurlRequest.php:84]
+0ECB .|    |    |    |    |    <= true
+0ECB .|    |    |    |    <= true
+0ECB .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+0ECB .|    |    |    |    |    Found nested jasig style attributes [Client.php:3345]
+0ECB .|    |    |    |    |    Attribute [ldap_cn] = I GDE DHARMA N [Client.php:3352]
+0ECB .|    |    |    |    |    Attribute [peran_user] = staff [Client.php:3352]
+0ECB .|    |    |    |    |    Attribute [nip] = 100120310270012891 [Client.php:3352]
+0ECB .|    |    |    |    |    Attribute [nama] = I Gde Dharma Nugraha [Client.php:3352]
+0ECB .|    |    |    |    <= ''
+0ECB .|    |    |    |    Storing Proxy List [Client.php:3270]
+0ECB .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+0ECB .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+0ECB .|    |    |    |    <= true
+0ECB .|    |    |    <= true
+0ECB .|    |    |    CAS 2.0 ticket `ST-22-ZNWkxXXyonTtZPoA54Cp-sso.ui.ac.id' was validated [Client.php:1453]
+0ECB .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+0ECB .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+0ECB .|    |    |    Prepare redirect to : http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:1518]
+0ECB .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+0ECB .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+0ECB .|    |    |    exit()
+0ECB .|    |    |    -
+0ECB .|    |    -
+0ECB .|    -
+D32E .START (2020-12-04 23:32:08) phpCAS-1.3.6+ ****************** [CAS.php:468]
+D32E .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+D32E .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+D32E .|    |    Session is authenticated as: i.gde [Client.php:936]
+D32E .|    <= ''
+D32E .<= ''
+D32E .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+D32E .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+D32E .<= ''
+D32E .=> phpCAS::forceAuthentication() [Cas.php:81]
+D32E .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+D32E .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+D32E .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+D32E .|    |    |    |    user = `i.gde' [Client.php:1622]
+D32E .|    |    |    <= true
+D32E .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+D32E .|    |    <= true
+D32E .|    |    no need to authenticate [Client.php:1282]
+D32E .|    <= true
+D32E .<= ''
+D32E .=> phpCAS::isAuthenticated() [Cas.php:89]
+D32E .|    => CAS_Client::isAuthenticated() [CAS.php:1145]
+D32E .|    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+D32E .|    |    |    user = `i.gde' [Client.php:1622]
+D32E .|    |    <= true
+D32E .|    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+D32E .|    <= true
+D32E .<= true
+F245 .START (2020-12-04 23:32:10) phpCAS-1.3.6+ ****************** [CAS.php:468]
+F245 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+F245 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+F245 .|    |    Starting a new session 2rc328p1ag4dsrmuedsp4i202kuoei0l [Client.php:932]
+F245 .|    |    Session is not authenticated [Client.php:938]
+F245 .|    <= ''
+F245 .<= ''
+F245 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+F245 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+F245 .<= ''
+F245 .=> phpCAS::logoutWithRedirectService(array (  'service' => 'http://localhost/accreditation/dashboard',)) [Cas.php:109]
+F245 .|    => phpCAS::error('type mismatched for parameter $service (should be `string\')') [CAS.php:1470]
+F245 .|    |    type mismatched for parameter $service (should be `string') in D:\xampp\htdocs\accreditation\application\libraries\Cas.phpon line 109 [CAS.php:566]
+F245 .|    <= ''
+9028 .START (2020-12-04 23:32:20) phpCAS-1.3.6+ ****************** [CAS.php:468]
+9028 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+9028 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+9028 .|    |    Session is not authenticated [Client.php:938]
+9028 .|    <= ''
+9028 .<= ''
+9028 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+9028 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+9028 .<= ''
+9028 .=> phpCAS::forceAuthentication() [Cas.php:81]
+9028 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+9028 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+9028 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+9028 .|    |    |    |    no user found [Client.php:1635]
+9028 .|    |    |    <= false
+9028 .|    |    |    no ticket found [Client.php:1494]
+9028 .|    |    <= false
+9028 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+9028 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+9028 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+9028 .|    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+9028 .|    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+9028 .|    |    |    <= 'https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+9028 .|    |    |    Redirect to : https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F [Client.php:1663]
+9028 .|    |    |    exit()
+9028 .|    |    |    -
+9028 .|    |    -
+9028 .|    -
+8F71 .START (2020-12-04 23:32:20) phpCAS-1.3.6+ ****************** [CAS.php:468]
+8F71 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+8F71 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+8F71 .|    |    Session is not authenticated [Client.php:938]
+8F71 .|    |    Ticket 'ST-25-oGbecUri3nY9YKSIFHpc-sso.ui.ac.id' found [Client.php:1020]
+8F71 .|    <= ''
+8F71 .<= ''
+8F71 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+8F71 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+8F71 .<= ''
+8F71 .=> phpCAS::forceAuthentication() [Cas.php:81]
+8F71 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+8F71 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+8F71 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+8F71 .|    |    |    |    no user found [Client.php:1635]
+8F71 .|    |    |    <= false
+8F71 .|    |    |    CAS 2.0 ticket `ST-25-oGbecUri3nY9YKSIFHpc-sso.ui.ac.id' is present [Client.php:1447]
+8F71 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+8F71 .|    |    |    |     [Client.php:3169]
+8F71 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+8F71 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+8F71 .|    |    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+8F71 .|    |    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+8F71 .|    |    |    |    <= 'https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+8F71 .|    |    |    |    => CAS_Client::_readURL('https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F&ticket=ST-25-oGbecUri3nY9YKSIFHpc-sso.ui.ac.id', NULL, NULL, NULL) [Client.php:3191]
+8F71 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+8F71 .|    |    |    |    |    |    Response Body: 
+8F71 .|    |    |    |    |    |    
+8F71 .|    |    |    |    |    |    
+8F71 .|    |    |    |    |    |    
+8F71 .|    |    |    |    |    |    
+8F71 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+8F71 .|    |    |    |    |    |    	<cas:authenticationSuccess>
+8F71 .|    |    |    |    |    |    		<cas:user>i.gde</cas:user>
+8F71 .|    |    |    |    |    |    
+8F71 .|    |    |    |    |    |    		<cas:attributes>
+8F71 .|    |    |    |    |    |    		    
+8F71 .|    |    |    |    |    |    			
+8F71 .|    |    |    |    |    |    			   
+8F71 .|    |    |    |    |    |    			   
+8F71 .|    |    |    |    |    |    			   
+8F71 .|    |    |    |    |    |    			   
+8F71 .|    |    |    |    |    |    				<cas:ldap_cn>I GDE DHARMA N</cas:ldap_cn>
+8F71 .|    |    |    |    |    |    			   
+8F71 .|    |    |    |    |    |    			
+8F71 .|    |    |    |    |    |    		    
+8F71 .|    |    |    |    |    |    			
+8F71 .|    |    |    |    |    |    			   
+8F71 .|    |    |    |    |    |    			   
+8F71 .|    |    |    |    |    |    			   
+8F71 .|    |    |    |    |    |    			   
+8F71 .|    |    |    |    |    |    				<cas:peran_user>staff</cas:peran_user>
+8F71 .|    |    |    |    |    |    			   
+8F71 .|    |    |    |    |    |    			
+8F71 .|    |    |    |    |    |    		    
+8F71 .|    |    |    |    |    |    			
+8F71 .|    |    |    |    |    |    			   
+8F71 .|    |    |    |    |    |    			   
+8F71 .|    |    |    |    |    |    			   
+8F71 .|    |    |    |    |    |    			   
+8F71 .|    |    |    |    |    |    				<cas:nip>100120310270012891</cas:nip>
+8F71 .|    |    |    |    |    |    			   
+8F71 .|    |    |    |    |    |    			
+8F71 .|    |    |    |    |    |    		    
+8F71 .|    |    |    |    |    |    			
+8F71 .|    |    |    |    |    |    			   
+8F71 .|    |    |    |    |    |    			   
+8F71 .|    |    |    |    |    |    			   
+8F71 .|    |    |    |    |    |    			   
+8F71 .|    |    |    |    |    |    				<cas:nama>I Gde Dharma Nugraha</cas:nama>
+8F71 .|    |    |    |    |    |    			   
+8F71 .|    |    |    |    |    |    			
+8F71 .|    |    |    |    |    |    		    
+8F71 .|    |    |    |    |    |    		</cas:attributes>
+8F71 .|    |    |    |    |    |    
+8F71 .|    |    |    |    |    |    
+8F71 .|    |    |    |    |    |    
+8F71 .|    |    |    |    |    |    	</cas:authenticationSuccess>
+8F71 .|    |    |    |    |    |    </cas:serviceResponse>
+8F71 .|    |    |    |    |    |    
+8F71 .|    |    |    |    |    |     [CurlRequest.php:84]
+8F71 .|    |    |    |    |    <= true
+8F71 .|    |    |    |    <= true
+8F71 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+8F71 .|    |    |    |    |    Found nested jasig style attributes [Client.php:3345]
+8F71 .|    |    |    |    |    Attribute [ldap_cn] = I GDE DHARMA N [Client.php:3352]
+8F71 .|    |    |    |    |    Attribute [peran_user] = staff [Client.php:3352]
+8F71 .|    |    |    |    |    Attribute [nip] = 100120310270012891 [Client.php:3352]
+8F71 .|    |    |    |    |    Attribute [nama] = I Gde Dharma Nugraha [Client.php:3352]
+8F71 .|    |    |    |    <= ''
+8F71 .|    |    |    |    Storing Proxy List [Client.php:3270]
+8F71 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+8F71 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+8F71 .|    |    |    |    <= true
+8F71 .|    |    |    <= true
+8F71 .|    |    |    CAS 2.0 ticket `ST-25-oGbecUri3nY9YKSIFHpc-sso.ui.ac.id' was validated [Client.php:1453]
+8F71 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+8F71 .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+8F71 .|    |    |    Prepare redirect to : http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:1518]
+8F71 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+8F71 .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+8F71 .|    |    |    exit()
+8F71 .|    |    |    -
+8F71 .|    |    -
+8F71 .|    -
+3AED .START (2020-12-04 23:32:20) phpCAS-1.3.6+ ****************** [CAS.php:468]
+3AED .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+3AED .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+3AED .|    |    Session is authenticated as: i.gde [Client.php:936]
+3AED .|    <= ''
+3AED .<= ''
+3AED .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+3AED .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+3AED .<= ''
+3AED .=> phpCAS::forceAuthentication() [Cas.php:81]
+3AED .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+3AED .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+3AED .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+3AED .|    |    |    |    user = `i.gde' [Client.php:1622]
+3AED .|    |    |    <= true
+3AED .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+3AED .|    |    <= true
+3AED .|    |    no need to authenticate [Client.php:1282]
+3AED .|    <= true
+3AED .<= ''
+3AED .=> phpCAS::isAuthenticated() [Cas.php:89]
+3AED .|    => CAS_Client::isAuthenticated() [CAS.php:1145]
+3AED .|    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+3AED .|    |    |    user = `i.gde' [Client.php:1622]
+3AED .|    |    <= true
+3AED .|    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+3AED .|    <= true
+3AED .<= true
+63D3 .START (2020-12-04 23:32:23) phpCAS-1.3.6+ ****************** [CAS.php:468]
+63D3 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+63D3 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+63D3 .|    |    Starting a new session i3to3tsdtadg45aatatcftijr57j2uem [Client.php:932]
+63D3 .|    |    Session is not authenticated [Client.php:938]
+63D3 .|    <= ''
+63D3 .<= ''
+63D3 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+63D3 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+63D3 .<= ''
+63D3 .=> phpCAS::logoutWithRedirectService(array (  'service' => 'http://localhost/accreditation/dashboard',)) [Cas.php:109]
+63D3 .|    => phpCAS::error('type mismatched for parameter $service (should be `string\')') [CAS.php:1470]
+63D3 .|    |    type mismatched for parameter $service (should be `string') in D:\xampp\htdocs\accreditation\application\libraries\Cas.phpon line 109 [CAS.php:566]
+63D3 .|    <= ''
+2C75 .START (2020-12-04 23:34:03) phpCAS-1.3.6+ ****************** [CAS.php:468]
+2C75 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+2C75 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+2C75 .|    |    Session is not authenticated [Client.php:938]
+2C75 .|    <= ''
+2C75 .<= ''
+2C75 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+2C75 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+2C75 .<= ''
+2C75 .=> phpCAS::forceAuthentication() [Cas.php:81]
+2C75 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+2C75 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+2C75 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+2C75 .|    |    |    |    no user found [Client.php:1635]
+2C75 .|    |    |    <= false
+2C75 .|    |    |    no ticket found [Client.php:1494]
+2C75 .|    |    <= false
+2C75 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+2C75 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+2C75 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+2C75 .|    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+2C75 .|    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+2C75 .|    |    |    <= 'https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+2C75 .|    |    |    Redirect to : https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F [Client.php:1663]
+2C75 .|    |    |    exit()
+2C75 .|    |    |    -
+2C75 .|    |    -
+2C75 .|    -
+924B .START (2020-12-04 23:34:03) phpCAS-1.3.6+ ****************** [CAS.php:468]
+924B .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+924B .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+924B .|    |    Session is not authenticated [Client.php:938]
+924B .|    |    Ticket 'ST-27-BRtvvU47MzI79WfHok3i-sso.ui.ac.id' found [Client.php:1020]
+924B .|    <= ''
+924B .<= ''
+924B .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+924B .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+924B .<= ''
+924B .=> phpCAS::forceAuthentication() [Cas.php:81]
+924B .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+924B .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+924B .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+924B .|    |    |    |    no user found [Client.php:1635]
+924B .|    |    |    <= false
+924B .|    |    |    CAS 2.0 ticket `ST-27-BRtvvU47MzI79WfHok3i-sso.ui.ac.id' is present [Client.php:1447]
+924B .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+924B .|    |    |    |     [Client.php:3169]
+924B .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+924B .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+924B .|    |    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+924B .|    |    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+924B .|    |    |    |    <= 'https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+924B .|    |    |    |    => CAS_Client::_readURL('https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F&ticket=ST-27-BRtvvU47MzI79WfHok3i-sso.ui.ac.id', NULL, NULL, NULL) [Client.php:3191]
+924B .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+924B .|    |    |    |    |    |    Response Body: 
+924B .|    |    |    |    |    |    
+924B .|    |    |    |    |    |    
+924B .|    |    |    |    |    |    
+924B .|    |    |    |    |    |    
+924B .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+924B .|    |    |    |    |    |    	<cas:authenticationSuccess>
+924B .|    |    |    |    |    |    		<cas:user>i.gde</cas:user>
+924B .|    |    |    |    |    |    
+924B .|    |    |    |    |    |    		<cas:attributes>
+924B .|    |    |    |    |    |    		    
+924B .|    |    |    |    |    |    			
+924B .|    |    |    |    |    |    			   
+924B .|    |    |    |    |    |    			   
+924B .|    |    |    |    |    |    			   
+924B .|    |    |    |    |    |    			   
+924B .|    |    |    |    |    |    				<cas:ldap_cn>I GDE DHARMA N</cas:ldap_cn>
+924B .|    |    |    |    |    |    			   
+924B .|    |    |    |    |    |    			
+924B .|    |    |    |    |    |    		    
+924B .|    |    |    |    |    |    			
+924B .|    |    |    |    |    |    			   
+924B .|    |    |    |    |    |    			   
+924B .|    |    |    |    |    |    			   
+924B .|    |    |    |    |    |    			   
+924B .|    |    |    |    |    |    				<cas:peran_user>staff</cas:peran_user>
+924B .|    |    |    |    |    |    			   
+924B .|    |    |    |    |    |    			
+924B .|    |    |    |    |    |    		    
+924B .|    |    |    |    |    |    			
+924B .|    |    |    |    |    |    			   
+924B .|    |    |    |    |    |    			   
+924B .|    |    |    |    |    |    			   
+924B .|    |    |    |    |    |    			   
+924B .|    |    |    |    |    |    				<cas:nip>100120310270012891</cas:nip>
+924B .|    |    |    |    |    |    			   
+924B .|    |    |    |    |    |    			
+924B .|    |    |    |    |    |    		    
+924B .|    |    |    |    |    |    			
+924B .|    |    |    |    |    |    			   
+924B .|    |    |    |    |    |    			   
+924B .|    |    |    |    |    |    			   
+924B .|    |    |    |    |    |    			   
+924B .|    |    |    |    |    |    				<cas:nama>I Gde Dharma Nugraha</cas:nama>
+924B .|    |    |    |    |    |    			   
+924B .|    |    |    |    |    |    			
+924B .|    |    |    |    |    |    		    
+924B .|    |    |    |    |    |    		</cas:attributes>
+924B .|    |    |    |    |    |    
+924B .|    |    |    |    |    |    
+924B .|    |    |    |    |    |    
+924B .|    |    |    |    |    |    	</cas:authenticationSuccess>
+924B .|    |    |    |    |    |    </cas:serviceResponse>
+924B .|    |    |    |    |    |    
+924B .|    |    |    |    |    |     [CurlRequest.php:84]
+924B .|    |    |    |    |    <= true
+924B .|    |    |    |    <= true
+924B .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+924B .|    |    |    |    |    Found nested jasig style attributes [Client.php:3345]
+924B .|    |    |    |    |    Attribute [ldap_cn] = I GDE DHARMA N [Client.php:3352]
+924B .|    |    |    |    |    Attribute [peran_user] = staff [Client.php:3352]
+924B .|    |    |    |    |    Attribute [nip] = 100120310270012891 [Client.php:3352]
+924B .|    |    |    |    |    Attribute [nama] = I Gde Dharma Nugraha [Client.php:3352]
+924B .|    |    |    |    <= ''
+924B .|    |    |    |    Storing Proxy List [Client.php:3270]
+924B .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+924B .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+924B .|    |    |    |    <= true
+924B .|    |    |    <= true
+924B .|    |    |    CAS 2.0 ticket `ST-27-BRtvvU47MzI79WfHok3i-sso.ui.ac.id' was validated [Client.php:1453]
+924B .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+924B .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+924B .|    |    |    Prepare redirect to : http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:1518]
+924B .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+924B .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+924B .|    |    |    exit()
+924B .|    |    |    -
+924B .|    |    -
+924B .|    -
+DF06 .START (2020-12-04 23:34:04) phpCAS-1.3.6+ ****************** [CAS.php:468]
+DF06 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+DF06 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+DF06 .|    |    Session is authenticated as: i.gde [Client.php:936]
+DF06 .|    <= ''
+DF06 .<= ''
+DF06 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+DF06 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+DF06 .<= ''
+DF06 .=> phpCAS::forceAuthentication() [Cas.php:81]
+DF06 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+DF06 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+DF06 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+DF06 .|    |    |    |    user = `i.gde' [Client.php:1622]
+DF06 .|    |    |    <= true
+DF06 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+DF06 .|    |    <= true
+DF06 .|    |    no need to authenticate [Client.php:1282]
+DF06 .|    <= true
+DF06 .<= ''
+DF06 .=> phpCAS::isAuthenticated() [Cas.php:89]
+DF06 .|    => CAS_Client::isAuthenticated() [CAS.php:1145]
+DF06 .|    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+DF06 .|    |    |    user = `i.gde' [Client.php:1622]
+DF06 .|    |    <= true
+DF06 .|    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+DF06 .|    <= true
+DF06 .<= true
+AE31 .START (2020-12-04 23:34:06) phpCAS-1.3.6+ ****************** [CAS.php:468]
+AE31 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+AE31 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+AE31 .|    |    Starting a new session 3795d883lvb05aogl6iu6sj64rshhd2i [Client.php:932]
+AE31 .|    |    Session is not authenticated [Client.php:938]
+AE31 .|    <= ''
+AE31 .<= ''
+AE31 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+AE31 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+AE31 .<= ''
+AE31 .=> phpCAS::logoutWithRedirectService('http://localhost/accreditation/') [Cas.php:110]
+AE31 .|    => CAS_Client::logout(array (  'service' => 'http://localhost/accreditation/',)) [CAS.php:1472]
+AE31 .|    |    Prepare redirect to : https://sso.ui.ac.id/cas2/logout?service=http%3A%2F%2Flocalhost%2Faccreditation%2F [Client.php:1696]
+AE31 .|    |    Destroying session : 3795d883lvb05aogl6iu6sj64rshhd2i [Client.php:1698]
+AE31 .|    |    Session terminated [Client.php:1702]
+AE31 .|    |    exit()
+AE31 .|    |    -
+AE31 .|    -
+85BD .START (2020-12-04 23:34:55) phpCAS-1.3.6+ ****************** [CAS.php:468]
+85BD .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+85BD .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+85BD .|    |    Session is not authenticated [Client.php:938]
+85BD .|    <= ''
+85BD .<= ''
+85BD .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+85BD .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+85BD .<= ''
+85BD .=> phpCAS::forceAuthentication() [Cas.php:81]
+85BD .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+85BD .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+85BD .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+85BD .|    |    |    |    no user found [Client.php:1635]
+85BD .|    |    |    <= false
+85BD .|    |    |    no ticket found [Client.php:1494]
+85BD .|    |    <= false
+85BD .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+85BD .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+85BD .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+85BD .|    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+85BD .|    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+85BD .|    |    |    <= 'https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+85BD .|    |    |    Redirect to : https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F [Client.php:1663]
+85BD .|    |    |    exit()
+85BD .|    |    |    -
+85BD .|    |    -
+85BD .|    -
+D901 .START (2020-12-04 23:35:04) phpCAS-1.3.6+ ****************** [CAS.php:468]
+D901 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+D901 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+D901 .|    |    Session is not authenticated [Client.php:938]
+D901 .|    |    Ticket 'ST-29-7wvncQ1tZEoj5ghho6Te-sso.ui.ac.id' found [Client.php:1020]
+D901 .|    <= ''
+D901 .<= ''
+D901 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+D901 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+D901 .<= ''
+D901 .=> phpCAS::forceAuthentication() [Cas.php:81]
+D901 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+D901 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+D901 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+D901 .|    |    |    |    no user found [Client.php:1635]
+D901 .|    |    |    <= false
+D901 .|    |    |    CAS 2.0 ticket `ST-29-7wvncQ1tZEoj5ghho6Te-sso.ui.ac.id' is present [Client.php:1447]
+D901 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+D901 .|    |    |    |     [Client.php:3169]
+D901 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+D901 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+D901 .|    |    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+D901 .|    |    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+D901 .|    |    |    |    <= 'https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+D901 .|    |    |    |    => CAS_Client::_readURL('https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F&ticket=ST-29-7wvncQ1tZEoj5ghho6Te-sso.ui.ac.id', NULL, NULL, NULL) [Client.php:3191]
+D901 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+D901 .|    |    |    |    |    |    Response Body: 
+D901 .|    |    |    |    |    |    
+D901 .|    |    |    |    |    |    
+D901 .|    |    |    |    |    |    
+D901 .|    |    |    |    |    |    
+D901 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+D901 .|    |    |    |    |    |    	<cas:authenticationSuccess>
+D901 .|    |    |    |    |    |    		<cas:user>i.gde</cas:user>
+D901 .|    |    |    |    |    |    
+D901 .|    |    |    |    |    |    		<cas:attributes>
+D901 .|    |    |    |    |    |    		    
+D901 .|    |    |    |    |    |    			
+D901 .|    |    |    |    |    |    			   
+D901 .|    |    |    |    |    |    			   
+D901 .|    |    |    |    |    |    			   
+D901 .|    |    |    |    |    |    			   
+D901 .|    |    |    |    |    |    				<cas:ldap_cn>I GDE DHARMA N</cas:ldap_cn>
+D901 .|    |    |    |    |    |    			   
+D901 .|    |    |    |    |    |    			
+D901 .|    |    |    |    |    |    		    
+D901 .|    |    |    |    |    |    			
+D901 .|    |    |    |    |    |    			   
+D901 .|    |    |    |    |    |    			   
+D901 .|    |    |    |    |    |    			   
+D901 .|    |    |    |    |    |    			   
+D901 .|    |    |    |    |    |    				<cas:peran_user>staff</cas:peran_user>
+D901 .|    |    |    |    |    |    			   
+D901 .|    |    |    |    |    |    			
+D901 .|    |    |    |    |    |    		    
+D901 .|    |    |    |    |    |    			
+D901 .|    |    |    |    |    |    			   
+D901 .|    |    |    |    |    |    			   
+D901 .|    |    |    |    |    |    			   
+D901 .|    |    |    |    |    |    			   
+D901 .|    |    |    |    |    |    				<cas:nip>100120310270012891</cas:nip>
+D901 .|    |    |    |    |    |    			   
+D901 .|    |    |    |    |    |    			
+D901 .|    |    |    |    |    |    		    
+D901 .|    |    |    |    |    |    			
+D901 .|    |    |    |    |    |    			   
+D901 .|    |    |    |    |    |    			   
+D901 .|    |    |    |    |    |    			   
+D901 .|    |    |    |    |    |    			   
+D901 .|    |    |    |    |    |    				<cas:nama>I Gde Dharma Nugraha</cas:nama>
+D901 .|    |    |    |    |    |    			   
+D901 .|    |    |    |    |    |    			
+D901 .|    |    |    |    |    |    		    
+D901 .|    |    |    |    |    |    		</cas:attributes>
+D901 .|    |    |    |    |    |    
+D901 .|    |    |    |    |    |    
+D901 .|    |    |    |    |    |    
+D901 .|    |    |    |    |    |    	</cas:authenticationSuccess>
+D901 .|    |    |    |    |    |    </cas:serviceResponse>
+D901 .|    |    |    |    |    |    
+D901 .|    |    |    |    |    |     [CurlRequest.php:84]
+D901 .|    |    |    |    |    <= true
+D901 .|    |    |    |    <= true
+D901 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+D901 .|    |    |    |    |    Found nested jasig style attributes [Client.php:3345]
+D901 .|    |    |    |    |    Attribute [ldap_cn] = I GDE DHARMA N [Client.php:3352]
+D901 .|    |    |    |    |    Attribute [peran_user] = staff [Client.php:3352]
+D901 .|    |    |    |    |    Attribute [nip] = 100120310270012891 [Client.php:3352]
+D901 .|    |    |    |    |    Attribute [nama] = I Gde Dharma Nugraha [Client.php:3352]
+D901 .|    |    |    |    <= ''
+D901 .|    |    |    |    Storing Proxy List [Client.php:3270]
+D901 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+D901 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+D901 .|    |    |    |    <= true
+D901 .|    |    |    <= true
+D901 .|    |    |    CAS 2.0 ticket `ST-29-7wvncQ1tZEoj5ghho6Te-sso.ui.ac.id' was validated [Client.php:1453]
+D901 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+D901 .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+D901 .|    |    |    Prepare redirect to : http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:1518]
+D901 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+D901 .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+D901 .|    |    |    exit()
+D901 .|    |    |    -
+D901 .|    |    -
+D901 .|    -
+3B54 .START (2020-12-04 23:35:04) phpCAS-1.3.6+ ****************** [CAS.php:468]
+3B54 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+3B54 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+3B54 .|    |    Session is authenticated as: i.gde [Client.php:936]
+3B54 .|    <= ''
+3B54 .<= ''
+3B54 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+3B54 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+3B54 .<= ''
+3B54 .=> phpCAS::forceAuthentication() [Cas.php:81]
+3B54 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+3B54 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+3B54 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+3B54 .|    |    |    |    user = `i.gde' [Client.php:1622]
+3B54 .|    |    |    <= true
+3B54 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+3B54 .|    |    <= true
+3B54 .|    |    no need to authenticate [Client.php:1282]
+3B54 .|    <= true
+3B54 .<= ''
+3B54 .=> phpCAS::isAuthenticated() [Cas.php:89]
+3B54 .|    => CAS_Client::isAuthenticated() [CAS.php:1145]
+3B54 .|    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+3B54 .|    |    |    user = `i.gde' [Client.php:1622]
+3B54 .|    |    <= true
+3B54 .|    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+3B54 .|    <= true
+3B54 .<= true
+9BDA .START (2020-12-04 23:35:06) phpCAS-1.3.6+ ****************** [CAS.php:468]
+9BDA .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+9BDA .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+9BDA .|    |    Starting a new session 0ts3dr90ipavkdbmgsfcpiipemb97s3k [Client.php:932]
+9BDA .|    |    Session is not authenticated [Client.php:938]
+9BDA .|    <= ''
+9BDA .<= ''
+9BDA .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+9BDA .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+9BDA .<= ''
+9BDA .=> phpCAS::logoutWithRedirectService('http://localhost/accreditation/') [Cas.php:110]
+9BDA .|    => CAS_Client::logout(array (  'service' => 'http://localhost/accreditation/',)) [CAS.php:1472]
+9BDA .|    |    Prepare redirect to : https://sso.ui.ac.id/cas2/logout?service=http%3A%2F%2Flocalhost%2Faccreditation%2F [Client.php:1696]
+9BDA .|    |    Destroying session : 0ts3dr90ipavkdbmgsfcpiipemb97s3k [Client.php:1698]
+9BDA .|    |    Session terminated [Client.php:1702]
+9BDA .|    |    exit()
+9BDA .|    |    -
+9BDA .|    -
+C609 .START (2020-12-04 23:47:42) phpCAS-1.3.6+ ****************** [CAS.php:468]
+C609 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+C609 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+C609 .|    |    Session is not authenticated [Client.php:938]
+C609 .|    <= ''
+C609 .<= ''
+C609 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+C609 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+C609 .<= ''
+C609 .=> phpCAS::forceAuthentication() [Cas.php:81]
+C609 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+C609 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+C609 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+C609 .|    |    |    |    no user found [Client.php:1635]
+C609 .|    |    |    <= false
+C609 .|    |    |    no ticket found [Client.php:1494]
+C609 .|    |    <= false
+C609 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+C609 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+C609 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+C609 .|    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+C609 .|    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+C609 .|    |    |    <= 'https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+C609 .|    |    |    Redirect to : https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F [Client.php:1663]
+C609 .|    |    |    exit()
+C609 .|    |    |    -
+C609 .|    |    -
+C609 .|    -
+DDB8 .START (2020-12-04 23:47:56) phpCAS-1.3.6+ ****************** [CAS.php:468]
+DDB8 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+DDB8 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+DDB8 .|    |    Session is not authenticated [Client.php:938]
+DDB8 .|    |    Ticket 'ST-38-X3WfmTx2bKgfnJsgI9Gc-sso.ui.ac.id' found [Client.php:1020]
+DDB8 .|    <= ''
+DDB8 .<= ''
+DDB8 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+DDB8 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+DDB8 .<= ''
+DDB8 .=> phpCAS::forceAuthentication() [Cas.php:81]
+DDB8 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+DDB8 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+DDB8 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+DDB8 .|    |    |    |    no user found [Client.php:1635]
+DDB8 .|    |    |    <= false
+DDB8 .|    |    |    CAS 2.0 ticket `ST-38-X3WfmTx2bKgfnJsgI9Gc-sso.ui.ac.id' is present [Client.php:1447]
+DDB8 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+DDB8 .|    |    |    |     [Client.php:3169]
+DDB8 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+DDB8 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+DDB8 .|    |    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+DDB8 .|    |    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+DDB8 .|    |    |    |    <= 'https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+DDB8 .|    |    |    |    => CAS_Client::_readURL('https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F&ticket=ST-38-X3WfmTx2bKgfnJsgI9Gc-sso.ui.ac.id', NULL, NULL, NULL) [Client.php:3191]
+DDB8 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+DDB8 .|    |    |    |    |    |    Response Body: 
+DDB8 .|    |    |    |    |    |    
+DDB8 .|    |    |    |    |    |    
+DDB8 .|    |    |    |    |    |    
+DDB8 .|    |    |    |    |    |    
+DDB8 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+DDB8 .|    |    |    |    |    |    	<cas:authenticationSuccess>
+DDB8 .|    |    |    |    |    |    		<cas:user>i.gde</cas:user>
+DDB8 .|    |    |    |    |    |    
+DDB8 .|    |    |    |    |    |    		<cas:attributes>
+DDB8 .|    |    |    |    |    |    		    
+DDB8 .|    |    |    |    |    |    			
+DDB8 .|    |    |    |    |    |    			   
+DDB8 .|    |    |    |    |    |    			   
+DDB8 .|    |    |    |    |    |    			   
+DDB8 .|    |    |    |    |    |    			   
+DDB8 .|    |    |    |    |    |    				<cas:ldap_cn>I GDE DHARMA N</cas:ldap_cn>
+DDB8 .|    |    |    |    |    |    			   
+DDB8 .|    |    |    |    |    |    			
+DDB8 .|    |    |    |    |    |    		    
+DDB8 .|    |    |    |    |    |    			
+DDB8 .|    |    |    |    |    |    			   
+DDB8 .|    |    |    |    |    |    			   
+DDB8 .|    |    |    |    |    |    			   
+DDB8 .|    |    |    |    |    |    			   
+DDB8 .|    |    |    |    |    |    				<cas:peran_user>staff</cas:peran_user>
+DDB8 .|    |    |    |    |    |    			   
+DDB8 .|    |    |    |    |    |    			
+DDB8 .|    |    |    |    |    |    		    
+DDB8 .|    |    |    |    |    |    			
+DDB8 .|    |    |    |    |    |    			   
+DDB8 .|    |    |    |    |    |    			   
+DDB8 .|    |    |    |    |    |    			   
+DDB8 .|    |    |    |    |    |    			   
+DDB8 .|    |    |    |    |    |    				<cas:nip>100120310270012891</cas:nip>
+DDB8 .|    |    |    |    |    |    			   
+DDB8 .|    |    |    |    |    |    			
+DDB8 .|    |    |    |    |    |    		    
+DDB8 .|    |    |    |    |    |    			
+DDB8 .|    |    |    |    |    |    			   
+DDB8 .|    |    |    |    |    |    			   
+DDB8 .|    |    |    |    |    |    			   
+DDB8 .|    |    |    |    |    |    			   
+DDB8 .|    |    |    |    |    |    				<cas:nama>I Gde Dharma Nugraha</cas:nama>
+DDB8 .|    |    |    |    |    |    			   
+DDB8 .|    |    |    |    |    |    			
+DDB8 .|    |    |    |    |    |    		    
+DDB8 .|    |    |    |    |    |    		</cas:attributes>
+DDB8 .|    |    |    |    |    |    
+DDB8 .|    |    |    |    |    |    
+DDB8 .|    |    |    |    |    |    
+DDB8 .|    |    |    |    |    |    	</cas:authenticationSuccess>
+DDB8 .|    |    |    |    |    |    </cas:serviceResponse>
+DDB8 .|    |    |    |    |    |    
+DDB8 .|    |    |    |    |    |     [CurlRequest.php:84]
+DDB8 .|    |    |    |    |    <= true
+DDB8 .|    |    |    |    <= true
+DDB8 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+DDB8 .|    |    |    |    |    Found nested jasig style attributes [Client.php:3345]
+DDB8 .|    |    |    |    |    Attribute [ldap_cn] = I GDE DHARMA N [Client.php:3352]
+DDB8 .|    |    |    |    |    Attribute [peran_user] = staff [Client.php:3352]
+DDB8 .|    |    |    |    |    Attribute [nip] = 100120310270012891 [Client.php:3352]
+DDB8 .|    |    |    |    |    Attribute [nama] = I Gde Dharma Nugraha [Client.php:3352]
+DDB8 .|    |    |    |    <= ''
+DDB8 .|    |    |    |    Storing Proxy List [Client.php:3270]
+DDB8 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+DDB8 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+DDB8 .|    |    |    |    <= true
+DDB8 .|    |    |    <= true
+DDB8 .|    |    |    CAS 2.0 ticket `ST-38-X3WfmTx2bKgfnJsgI9Gc-sso.ui.ac.id' was validated [Client.php:1453]
+DDB8 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+DDB8 .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+DDB8 .|    |    |    Prepare redirect to : http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:1518]
+DDB8 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+DDB8 .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+DDB8 .|    |    |    exit()
+DDB8 .|    |    |    -
+DDB8 .|    |    -
+DDB8 .|    -
+31A1 .START (2020-12-04 23:47:56) phpCAS-1.3.6+ ****************** [CAS.php:468]
+31A1 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+31A1 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+31A1 .|    |    Session is authenticated as: i.gde [Client.php:936]
+31A1 .|    <= ''
+31A1 .<= ''
+31A1 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+31A1 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+31A1 .<= ''
+31A1 .=> phpCAS::forceAuthentication() [Cas.php:81]
+31A1 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+31A1 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+31A1 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+31A1 .|    |    |    |    user = `i.gde' [Client.php:1622]
+31A1 .|    |    |    <= true
+31A1 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+31A1 .|    |    <= true
+31A1 .|    |    no need to authenticate [Client.php:1282]
+31A1 .|    <= true
+31A1 .<= ''
+31A1 .=> phpCAS::isAuthenticated() [Cas.php:89]
+31A1 .|    => CAS_Client::isAuthenticated() [CAS.php:1145]
+31A1 .|    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+31A1 .|    |    |    user = `i.gde' [Client.php:1622]
+31A1 .|    |    <= true
+31A1 .|    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+31A1 .|    <= true
+31A1 .<= true
+7D01 .START (2020-12-04 23:49:18) phpCAS-1.3.6+ ****************** [CAS.php:468]
+7D01 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+7D01 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+7D01 .|    |    Starting a new session 93reg43tqmgvbrh57lca3334khgag1pt [Client.php:932]
+7D01 .|    |    Session is not authenticated [Client.php:938]
+7D01 .|    <= ''
+7D01 .<= ''
+7D01 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+7D01 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+7D01 .<= ''
+7D01 .=> phpCAS::logoutWithRedirectService('http://localhost/accreditation/') [Cas.php:110]
+7D01 .|    => CAS_Client::logout(array (  'service' => 'http://localhost/accreditation/',)) [CAS.php:1472]
+7D01 .|    |    Prepare redirect to : https://sso.ui.ac.id/cas2/logout?service=http%3A%2F%2Flocalhost%2Faccreditation%2F [Client.php:1696]
+7D01 .|    |    Destroying session : 93reg43tqmgvbrh57lca3334khgag1pt [Client.php:1698]
+7D01 .|    |    Session terminated [Client.php:1702]
+7D01 .|    |    exit()
+7D01 .|    |    -
+7D01 .|    -
+7AD6 .START (2020-12-04 23:49:27) phpCAS-1.3.6+ ****************** [CAS.php:468]
+7AD6 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+7AD6 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+7AD6 .|    |    Session is not authenticated [Client.php:938]
+7AD6 .|    <= ''
+7AD6 .<= ''
+7AD6 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+7AD6 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+7AD6 .<= ''
+7AD6 .=> phpCAS::forceAuthentication() [Cas.php:81]
+7AD6 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+7AD6 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+7AD6 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+7AD6 .|    |    |    |    no user found [Client.php:1635]
+7AD6 .|    |    |    <= false
+7AD6 .|    |    |    no ticket found [Client.php:1494]
+7AD6 .|    |    <= false
+7AD6 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+7AD6 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+7AD6 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+7AD6 .|    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+7AD6 .|    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+7AD6 .|    |    |    <= 'https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+7AD6 .|    |    |    Redirect to : https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F [Client.php:1663]
+7AD6 .|    |    |    exit()
+7AD6 .|    |    |    -
+7AD6 .|    |    -
+7AD6 .|    -
+58A9 .START (2020-12-04 23:49:35) phpCAS-1.3.6+ ****************** [CAS.php:468]
+58A9 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+58A9 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+58A9 .|    |    Session is not authenticated [Client.php:938]
+58A9 .|    |    Ticket 'ST-40-eR1vn4HN3ftvnzwNdHwe-sso.ui.ac.id' found [Client.php:1020]
+58A9 .|    <= ''
+58A9 .<= ''
+58A9 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+58A9 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+58A9 .<= ''
+58A9 .=> phpCAS::forceAuthentication() [Cas.php:81]
+58A9 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+58A9 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+58A9 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+58A9 .|    |    |    |    no user found [Client.php:1635]
+58A9 .|    |    |    <= false
+58A9 .|    |    |    CAS 2.0 ticket `ST-40-eR1vn4HN3ftvnzwNdHwe-sso.ui.ac.id' is present [Client.php:1447]
+58A9 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+58A9 .|    |    |    |     [Client.php:3169]
+58A9 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+58A9 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+58A9 .|    |    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+58A9 .|    |    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+58A9 .|    |    |    |    <= 'https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+58A9 .|    |    |    |    => CAS_Client::_readURL('https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F&ticket=ST-40-eR1vn4HN3ftvnzwNdHwe-sso.ui.ac.id', NULL, NULL, NULL) [Client.php:3191]
+58A9 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+58A9 .|    |    |    |    |    |    Response Body: 
+58A9 .|    |    |    |    |    |    
+58A9 .|    |    |    |    |    |    
+58A9 .|    |    |    |    |    |    
+58A9 .|    |    |    |    |    |    
+58A9 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+58A9 .|    |    |    |    |    |    	<cas:authenticationSuccess>
+58A9 .|    |    |    |    |    |    		<cas:user>i.gde</cas:user>
+58A9 .|    |    |    |    |    |    
+58A9 .|    |    |    |    |    |    		<cas:attributes>
+58A9 .|    |    |    |    |    |    		    
+58A9 .|    |    |    |    |    |    			
+58A9 .|    |    |    |    |    |    			   
+58A9 .|    |    |    |    |    |    			   
+58A9 .|    |    |    |    |    |    			   
+58A9 .|    |    |    |    |    |    			   
+58A9 .|    |    |    |    |    |    				<cas:ldap_cn>I GDE DHARMA N</cas:ldap_cn>
+58A9 .|    |    |    |    |    |    			   
+58A9 .|    |    |    |    |    |    			
+58A9 .|    |    |    |    |    |    		    
+58A9 .|    |    |    |    |    |    			
+58A9 .|    |    |    |    |    |    			   
+58A9 .|    |    |    |    |    |    			   
+58A9 .|    |    |    |    |    |    			   
+58A9 .|    |    |    |    |    |    			   
+58A9 .|    |    |    |    |    |    				<cas:peran_user>staff</cas:peran_user>
+58A9 .|    |    |    |    |    |    			   
+58A9 .|    |    |    |    |    |    			
+58A9 .|    |    |    |    |    |    		    
+58A9 .|    |    |    |    |    |    			
+58A9 .|    |    |    |    |    |    			   
+58A9 .|    |    |    |    |    |    			   
+58A9 .|    |    |    |    |    |    			   
+58A9 .|    |    |    |    |    |    			   
+58A9 .|    |    |    |    |    |    				<cas:nip>100120310270012891</cas:nip>
+58A9 .|    |    |    |    |    |    			   
+58A9 .|    |    |    |    |    |    			
+58A9 .|    |    |    |    |    |    		    
+58A9 .|    |    |    |    |    |    			
+58A9 .|    |    |    |    |    |    			   
+58A9 .|    |    |    |    |    |    			   
+58A9 .|    |    |    |    |    |    			   
+58A9 .|    |    |    |    |    |    			   
+58A9 .|    |    |    |    |    |    				<cas:nama>I Gde Dharma Nugraha</cas:nama>
+58A9 .|    |    |    |    |    |    			   
+58A9 .|    |    |    |    |    |    			
+58A9 .|    |    |    |    |    |    		    
+58A9 .|    |    |    |    |    |    		</cas:attributes>
+58A9 .|    |    |    |    |    |    
+58A9 .|    |    |    |    |    |    
+58A9 .|    |    |    |    |    |    
+58A9 .|    |    |    |    |    |    	</cas:authenticationSuccess>
+58A9 .|    |    |    |    |    |    </cas:serviceResponse>
+58A9 .|    |    |    |    |    |    
+58A9 .|    |    |    |    |    |     [CurlRequest.php:84]
+58A9 .|    |    |    |    |    <= true
+58A9 .|    |    |    |    <= true
+58A9 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+58A9 .|    |    |    |    |    Found nested jasig style attributes [Client.php:3345]
+58A9 .|    |    |    |    |    Attribute [ldap_cn] = I GDE DHARMA N [Client.php:3352]
+58A9 .|    |    |    |    |    Attribute [peran_user] = staff [Client.php:3352]
+58A9 .|    |    |    |    |    Attribute [nip] = 100120310270012891 [Client.php:3352]
+58A9 .|    |    |    |    |    Attribute [nama] = I Gde Dharma Nugraha [Client.php:3352]
+58A9 .|    |    |    |    <= ''
+58A9 .|    |    |    |    Storing Proxy List [Client.php:3270]
+58A9 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+58A9 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+58A9 .|    |    |    |    <= true
+58A9 .|    |    |    <= true
+58A9 .|    |    |    CAS 2.0 ticket `ST-40-eR1vn4HN3ftvnzwNdHwe-sso.ui.ac.id' was validated [Client.php:1453]
+58A9 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+58A9 .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+58A9 .|    |    |    Prepare redirect to : http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:1518]
+58A9 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+58A9 .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+58A9 .|    |    |    exit()
+58A9 .|    |    |    -
+58A9 .|    |    -
+58A9 .|    -
+4D4B .START (2020-12-04 23:49:36) phpCAS-1.3.6+ ****************** [CAS.php:468]
+4D4B .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+4D4B .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+4D4B .|    |    Session is authenticated as: i.gde [Client.php:936]
+4D4B .|    <= ''
+4D4B .<= ''
+4D4B .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+4D4B .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+4D4B .<= ''
+4D4B .=> phpCAS::forceAuthentication() [Cas.php:81]
+4D4B .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+4D4B .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+4D4B .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+4D4B .|    |    |    |    user = `i.gde' [Client.php:1622]
+4D4B .|    |    |    <= true
+4D4B .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+4D4B .|    |    <= true
+4D4B .|    |    no need to authenticate [Client.php:1282]
+4D4B .|    <= true
+4D4B .<= ''
+4D4B .=> phpCAS::isAuthenticated() [Cas.php:89]
+4D4B .|    => CAS_Client::isAuthenticated() [CAS.php:1145]
+4D4B .|    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+4D4B .|    |    |    user = `i.gde' [Client.php:1622]
+4D4B .|    |    <= true
+4D4B .|    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+4D4B .|    <= true
+4D4B .<= true
+382D .START (2020-12-04 23:51:50) phpCAS-1.3.6+ ****************** [CAS.php:468]
+382D .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+382D .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+382D .|    |    Starting a new session 01p1m0rscsq97lr3f8btknne1dghn6vb [Client.php:932]
+382D .|    |    Session is not authenticated [Client.php:938]
+382D .|    <= ''
+382D .<= ''
+382D .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+382D .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+382D .<= ''
+382D .=> phpCAS::logoutWithRedirectService('http://localhost/accreditation/') [Cas.php:110]
+382D .|    => CAS_Client::logout(array (  'service' => 'http://localhost/accreditation/',)) [CAS.php:1472]
+382D .|    |    Prepare redirect to : https://sso.ui.ac.id/cas2/logout?service=http%3A%2F%2Flocalhost%2Faccreditation%2F [Client.php:1696]
+382D .|    |    Destroying session : 01p1m0rscsq97lr3f8btknne1dghn6vb [Client.php:1698]
+382D .|    |    Session terminated [Client.php:1702]
+382D .|    |    exit()
+382D .|    |    -
+382D .|    -
+1E9D .START (2020-12-04 23:52:02) phpCAS-1.3.6+ ****************** [CAS.php:468]
+1E9D .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+1E9D .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+1E9D .|    |    Session is not authenticated [Client.php:938]
+1E9D .|    <= ''
+1E9D .<= ''
+1E9D .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+1E9D .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+1E9D .<= ''
+1E9D .=> phpCAS::forceAuthentication() [Cas.php:81]
+1E9D .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+1E9D .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+1E9D .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+1E9D .|    |    |    |    no user found [Client.php:1635]
+1E9D .|    |    |    <= false
+1E9D .|    |    |    no ticket found [Client.php:1494]
+1E9D .|    |    <= false
+1E9D .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+1E9D .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+1E9D .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+1E9D .|    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+1E9D .|    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+1E9D .|    |    |    <= 'https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+1E9D .|    |    |    Redirect to : https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F [Client.php:1663]
+1E9D .|    |    |    exit()
+1E9D .|    |    |    -
+1E9D .|    |    -
+1E9D .|    -
+0B8D .START (2020-12-04 23:52:15) phpCAS-1.3.6+ ****************** [CAS.php:468]
+0B8D .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+0B8D .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+0B8D .|    |    Session is not authenticated [Client.php:938]
+0B8D .|    |    Ticket 'ST-41-ervHodSdJT7ZV3mPwWYR-sso.ui.ac.id' found [Client.php:1020]
+0B8D .|    <= ''
+0B8D .<= ''
+0B8D .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+0B8D .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+0B8D .<= ''
+0B8D .=> phpCAS::forceAuthentication() [Cas.php:81]
+0B8D .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+0B8D .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+0B8D .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+0B8D .|    |    |    |    no user found [Client.php:1635]
+0B8D .|    |    |    <= false
+0B8D .|    |    |    CAS 2.0 ticket `ST-41-ervHodSdJT7ZV3mPwWYR-sso.ui.ac.id' is present [Client.php:1447]
+0B8D .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+0B8D .|    |    |    |     [Client.php:3169]
+0B8D .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+0B8D .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+0B8D .|    |    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+0B8D .|    |    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+0B8D .|    |    |    |    <= 'https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+0B8D .|    |    |    |    => CAS_Client::_readURL('https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F&ticket=ST-41-ervHodSdJT7ZV3mPwWYR-sso.ui.ac.id', NULL, NULL, NULL) [Client.php:3191]
+0B8D .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+0B8D .|    |    |    |    |    |    Response Body: 
+0B8D .|    |    |    |    |    |    
+0B8D .|    |    |    |    |    |    
+0B8D .|    |    |    |    |    |    
+0B8D .|    |    |    |    |    |    
+0B8D .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+0B8D .|    |    |    |    |    |    	<cas:authenticationSuccess>
+0B8D .|    |    |    |    |    |    		<cas:user>i.gde</cas:user>
+0B8D .|    |    |    |    |    |    
+0B8D .|    |    |    |    |    |    		<cas:attributes>
+0B8D .|    |    |    |    |    |    		    
+0B8D .|    |    |    |    |    |    			
+0B8D .|    |    |    |    |    |    			   
+0B8D .|    |    |    |    |    |    			   
+0B8D .|    |    |    |    |    |    			   
+0B8D .|    |    |    |    |    |    			   
+0B8D .|    |    |    |    |    |    				<cas:ldap_cn>I GDE DHARMA N</cas:ldap_cn>
+0B8D .|    |    |    |    |    |    			   
+0B8D .|    |    |    |    |    |    			
+0B8D .|    |    |    |    |    |    		    
+0B8D .|    |    |    |    |    |    			
+0B8D .|    |    |    |    |    |    			   
+0B8D .|    |    |    |    |    |    			   
+0B8D .|    |    |    |    |    |    			   
+0B8D .|    |    |    |    |    |    			   
+0B8D .|    |    |    |    |    |    				<cas:peran_user>staff</cas:peran_user>
+0B8D .|    |    |    |    |    |    			   
+0B8D .|    |    |    |    |    |    			
+0B8D .|    |    |    |    |    |    		    
+0B8D .|    |    |    |    |    |    			
+0B8D .|    |    |    |    |    |    			   
+0B8D .|    |    |    |    |    |    			   
+0B8D .|    |    |    |    |    |    			   
+0B8D .|    |    |    |    |    |    			   
+0B8D .|    |    |    |    |    |    				<cas:nip>100120310270012891</cas:nip>
+0B8D .|    |    |    |    |    |    			   
+0B8D .|    |    |    |    |    |    			
+0B8D .|    |    |    |    |    |    		    
+0B8D .|    |    |    |    |    |    			
+0B8D .|    |    |    |    |    |    			   
+0B8D .|    |    |    |    |    |    			   
+0B8D .|    |    |    |    |    |    			   
+0B8D .|    |    |    |    |    |    			   
+0B8D .|    |    |    |    |    |    				<cas:nama>I Gde Dharma Nugraha</cas:nama>
+0B8D .|    |    |    |    |    |    			   
+0B8D .|    |    |    |    |    |    			
+0B8D .|    |    |    |    |    |    		    
+0B8D .|    |    |    |    |    |    		</cas:attributes>
+0B8D .|    |    |    |    |    |    
+0B8D .|    |    |    |    |    |    
+0B8D .|    |    |    |    |    |    
+0B8D .|    |    |    |    |    |    	</cas:authenticationSuccess>
+0B8D .|    |    |    |    |    |    </cas:serviceResponse>
+0B8D .|    |    |    |    |    |    
+0B8D .|    |    |    |    |    |     [CurlRequest.php:84]
+0B8D .|    |    |    |    |    <= true
+0B8D .|    |    |    |    <= true
+0B8D .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+0B8D .|    |    |    |    |    Found nested jasig style attributes [Client.php:3345]
+0B8D .|    |    |    |    |    Attribute [ldap_cn] = I GDE DHARMA N [Client.php:3352]
+0B8D .|    |    |    |    |    Attribute [peran_user] = staff [Client.php:3352]
+0B8D .|    |    |    |    |    Attribute [nip] = 100120310270012891 [Client.php:3352]
+0B8D .|    |    |    |    |    Attribute [nama] = I Gde Dharma Nugraha [Client.php:3352]
+0B8D .|    |    |    |    <= ''
+0B8D .|    |    |    |    Storing Proxy List [Client.php:3270]
+0B8D .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+0B8D .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+0B8D .|    |    |    |    <= true
+0B8D .|    |    |    <= true
+0B8D .|    |    |    CAS 2.0 ticket `ST-41-ervHodSdJT7ZV3mPwWYR-sso.ui.ac.id' was validated [Client.php:1453]
+0B8D .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+0B8D .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+0B8D .|    |    |    Prepare redirect to : http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:1518]
+0B8D .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+0B8D .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+0B8D .|    |    |    exit()
+0B8D .|    |    |    -
+0B8D .|    |    -
+0B8D .|    -
+B59A .START (2020-12-04 23:52:15) phpCAS-1.3.6+ ****************** [CAS.php:468]
+B59A .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+B59A .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+B59A .|    |    Session is authenticated as: i.gde [Client.php:936]
+B59A .|    <= ''
+B59A .<= ''
+B59A .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+B59A .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+B59A .<= ''
+B59A .=> phpCAS::forceAuthentication() [Cas.php:81]
+B59A .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+B59A .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+B59A .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+B59A .|    |    |    |    user = `i.gde' [Client.php:1622]
+B59A .|    |    |    <= true
+B59A .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+B59A .|    |    <= true
+B59A .|    |    no need to authenticate [Client.php:1282]
+B59A .|    <= true
+B59A .<= ''
+B59A .=> phpCAS::isAuthenticated() [Cas.php:89]
+B59A .|    => CAS_Client::isAuthenticated() [CAS.php:1145]
+B59A .|    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+B59A .|    |    |    user = `i.gde' [Client.php:1622]
+B59A .|    |    <= true
+B59A .|    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+B59A .|    <= true
+B59A .<= true
+3AC0 .START (2020-12-04 23:52:30) phpCAS-1.3.6+ ****************** [CAS.php:468]
+3AC0 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+3AC0 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+3AC0 .|    |    Session is authenticated as: i.gde [Client.php:936]
+3AC0 .|    <= ''
+3AC0 .<= ''
+3AC0 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+3AC0 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+3AC0 .<= ''
+3AC0 .=> phpCAS::forceAuthentication() [Cas.php:81]
+3AC0 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+3AC0 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+3AC0 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+3AC0 .|    |    |    |    user = `i.gde' [Client.php:1622]
+3AC0 .|    |    |    <= true
+3AC0 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+3AC0 .|    |    <= true
+3AC0 .|    |    no need to authenticate [Client.php:1282]
+3AC0 .|    <= true
+3AC0 .<= ''
+3AC0 .=> phpCAS::isAuthenticated() [Cas.php:89]
+3AC0 .|    => CAS_Client::isAuthenticated() [CAS.php:1145]
+3AC0 .|    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+3AC0 .|    |    |    user = `i.gde' [Client.php:1622]
+3AC0 .|    |    <= true
+3AC0 .|    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+3AC0 .|    <= true
+3AC0 .<= true
+ED0B .START (2020-12-05 00:00:47) phpCAS-1.3.6+ ****************** [CAS.php:468]
+ED0B .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+ED0B .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+ED0B .|    |    Session is not authenticated [Client.php:938]
+ED0B .|    <= ''
+ED0B .<= ''
+ED0B .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+ED0B .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+ED0B .<= ''
+ED0B .=> phpCAS::forceAuthentication() [Cas.php:81]
+ED0B .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+ED0B .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+ED0B .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+ED0B .|    |    |    |    no user found [Client.php:1635]
+ED0B .|    |    |    <= false
+ED0B .|    |    |    no ticket found [Client.php:1494]
+ED0B .|    |    <= false
+ED0B .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+ED0B .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+ED0B .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+ED0B .|    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+ED0B .|    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+ED0B .|    |    |    <= 'https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+ED0B .|    |    |    Redirect to : https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F [Client.php:1663]
+ED0B .|    |    |    exit()
+ED0B .|    |    |    -
+ED0B .|    |    -
+ED0B .|    -
+94C0 .START (2020-12-05 00:00:47) phpCAS-1.3.6+ ****************** [CAS.php:468]
+94C0 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+94C0 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+94C0 .|    |    Session is not authenticated [Client.php:938]
+94C0 .|    |    Ticket 'ST-45-4vDfUztcR2UadaetXG1M-sso.ui.ac.id' found [Client.php:1020]
+94C0 .|    <= ''
+94C0 .<= ''
+94C0 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+94C0 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+94C0 .<= ''
+94C0 .=> phpCAS::forceAuthentication() [Cas.php:81]
+94C0 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+94C0 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+94C0 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+94C0 .|    |    |    |    no user found [Client.php:1635]
+94C0 .|    |    |    <= false
+94C0 .|    |    |    CAS 2.0 ticket `ST-45-4vDfUztcR2UadaetXG1M-sso.ui.ac.id' is present [Client.php:1447]
+94C0 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+94C0 .|    |    |    |     [Client.php:3169]
+94C0 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+94C0 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+94C0 .|    |    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+94C0 .|    |    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+94C0 .|    |    |    |    <= 'https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+94C0 .|    |    |    |    => CAS_Client::_readURL('https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F&ticket=ST-45-4vDfUztcR2UadaetXG1M-sso.ui.ac.id', NULL, NULL, NULL) [Client.php:3191]
+94C0 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+94C0 .|    |    |    |    |    |    Response Body: 
+94C0 .|    |    |    |    |    |    
+94C0 .|    |    |    |    |    |    
+94C0 .|    |    |    |    |    |    
+94C0 .|    |    |    |    |    |    
+94C0 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+94C0 .|    |    |    |    |    |    	<cas:authenticationSuccess>
+94C0 .|    |    |    |    |    |    		<cas:user>i.gde</cas:user>
+94C0 .|    |    |    |    |    |    
+94C0 .|    |    |    |    |    |    		<cas:attributes>
+94C0 .|    |    |    |    |    |    		    
+94C0 .|    |    |    |    |    |    			
+94C0 .|    |    |    |    |    |    			   
+94C0 .|    |    |    |    |    |    			   
+94C0 .|    |    |    |    |    |    			   
+94C0 .|    |    |    |    |    |    			   
+94C0 .|    |    |    |    |    |    				<cas:ldap_cn>I GDE DHARMA N</cas:ldap_cn>
+94C0 .|    |    |    |    |    |    			   
+94C0 .|    |    |    |    |    |    			
+94C0 .|    |    |    |    |    |    		    
+94C0 .|    |    |    |    |    |    			
+94C0 .|    |    |    |    |    |    			   
+94C0 .|    |    |    |    |    |    			   
+94C0 .|    |    |    |    |    |    			   
+94C0 .|    |    |    |    |    |    			   
+94C0 .|    |    |    |    |    |    				<cas:peran_user>staff</cas:peran_user>
+94C0 .|    |    |    |    |    |    			   
+94C0 .|    |    |    |    |    |    			
+94C0 .|    |    |    |    |    |    		    
+94C0 .|    |    |    |    |    |    			
+94C0 .|    |    |    |    |    |    			   
+94C0 .|    |    |    |    |    |    			   
+94C0 .|    |    |    |    |    |    			   
+94C0 .|    |    |    |    |    |    			   
+94C0 .|    |    |    |    |    |    				<cas:nip>100120310270012891</cas:nip>
+94C0 .|    |    |    |    |    |    			   
+94C0 .|    |    |    |    |    |    			
+94C0 .|    |    |    |    |    |    		    
+94C0 .|    |    |    |    |    |    			
+94C0 .|    |    |    |    |    |    			   
+94C0 .|    |    |    |    |    |    			   
+94C0 .|    |    |    |    |    |    			   
+94C0 .|    |    |    |    |    |    			   
+94C0 .|    |    |    |    |    |    				<cas:nama>I Gde Dharma Nugraha</cas:nama>
+94C0 .|    |    |    |    |    |    			   
+94C0 .|    |    |    |    |    |    			
+94C0 .|    |    |    |    |    |    		    
+94C0 .|    |    |    |    |    |    		</cas:attributes>
+94C0 .|    |    |    |    |    |    
+94C0 .|    |    |    |    |    |    
+94C0 .|    |    |    |    |    |    
+94C0 .|    |    |    |    |    |    	</cas:authenticationSuccess>
+94C0 .|    |    |    |    |    |    </cas:serviceResponse>
+94C0 .|    |    |    |    |    |    
+94C0 .|    |    |    |    |    |     [CurlRequest.php:84]
+94C0 .|    |    |    |    |    <= true
+94C0 .|    |    |    |    <= true
+94C0 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+94C0 .|    |    |    |    |    Found nested jasig style attributes [Client.php:3345]
+94C0 .|    |    |    |    |    Attribute [ldap_cn] = I GDE DHARMA N [Client.php:3352]
+94C0 .|    |    |    |    |    Attribute [peran_user] = staff [Client.php:3352]
+94C0 .|    |    |    |    |    Attribute [nip] = 100120310270012891 [Client.php:3352]
+94C0 .|    |    |    |    |    Attribute [nama] = I Gde Dharma Nugraha [Client.php:3352]
+94C0 .|    |    |    |    <= ''
+94C0 .|    |    |    |    Storing Proxy List [Client.php:3270]
+94C0 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+94C0 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+94C0 .|    |    |    |    <= true
+94C0 .|    |    |    <= true
+94C0 .|    |    |    CAS 2.0 ticket `ST-45-4vDfUztcR2UadaetXG1M-sso.ui.ac.id' was validated [Client.php:1453]
+94C0 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+94C0 .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+94C0 .|    |    |    Prepare redirect to : http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:1518]
+94C0 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+94C0 .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+94C0 .|    |    |    exit()
+94C0 .|    |    |    -
+94C0 .|    |    -
+94C0 .|    -
+4051 .START (2020-12-05 00:00:47) phpCAS-1.3.6+ ****************** [CAS.php:468]
+4051 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+4051 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+4051 .|    |    Session is authenticated as: i.gde [Client.php:936]
+4051 .|    <= ''
+4051 .<= ''
+4051 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+4051 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+4051 .<= ''
+4051 .=> phpCAS::forceAuthentication() [Cas.php:81]
+4051 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+4051 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+4051 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+4051 .|    |    |    |    user = `i.gde' [Client.php:1622]
+4051 .|    |    |    <= true
+4051 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+4051 .|    |    <= true
+4051 .|    |    no need to authenticate [Client.php:1282]
+4051 .|    <= true
+4051 .<= ''
+4051 .=> phpCAS::isAuthenticated() [Cas.php:89]
+4051 .|    => CAS_Client::isAuthenticated() [CAS.php:1145]
+4051 .|    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+4051 .|    |    |    user = `i.gde' [Client.php:1622]
+4051 .|    |    <= true
+4051 .|    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+4051 .|    <= true
+4051 .<= true
+665F .START (2020-12-05 00:00:52) phpCAS-1.3.6+ ****************** [CAS.php:468]
+665F .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+665F .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+665F .|    |    Session is not authenticated [Client.php:938]
+665F .|    <= ''
+665F .<= ''
+665F .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+665F .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+665F .<= ''
+665F .=> phpCAS::forceAuthentication() [Cas.php:81]
+665F .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+665F .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+665F .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+665F .|    |    |    |    no user found [Client.php:1635]
+665F .|    |    |    <= false
+665F .|    |    |    no ticket found [Client.php:1494]
+665F .|    |    <= false
+665F .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+665F .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+665F .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+665F .|    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+665F .|    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+665F .|    |    |    <= 'https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+665F .|    |    |    Redirect to : https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F [Client.php:1663]
+665F .|    |    |    exit()
+665F .|    |    |    -
+665F .|    |    -
+665F .|    -
+55E5 .START (2020-12-05 00:00:52) phpCAS-1.3.6+ ****************** [CAS.php:468]
+55E5 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+55E5 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+55E5 .|    |    Session is not authenticated [Client.php:938]
+55E5 .|    |    Ticket 'ST-46-AfdmYcdSgLFde72w3hl6-sso.ui.ac.id' found [Client.php:1020]
+55E5 .|    <= ''
+55E5 .<= ''
+55E5 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+55E5 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+55E5 .<= ''
+55E5 .=> phpCAS::forceAuthentication() [Cas.php:81]
+55E5 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+55E5 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+55E5 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+55E5 .|    |    |    |    no user found [Client.php:1635]
+55E5 .|    |    |    <= false
+55E5 .|    |    |    CAS 2.0 ticket `ST-46-AfdmYcdSgLFde72w3hl6-sso.ui.ac.id' is present [Client.php:1447]
+55E5 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+55E5 .|    |    |    |     [Client.php:3169]
+55E5 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+55E5 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+55E5 .|    |    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+55E5 .|    |    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+55E5 .|    |    |    |    <= 'https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+55E5 .|    |    |    |    => CAS_Client::_readURL('https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F&ticket=ST-46-AfdmYcdSgLFde72w3hl6-sso.ui.ac.id', NULL, NULL, NULL) [Client.php:3191]
+55E5 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+55E5 .|    |    |    |    |    |    Response Body: 
+55E5 .|    |    |    |    |    |    
+55E5 .|    |    |    |    |    |    
+55E5 .|    |    |    |    |    |    
+55E5 .|    |    |    |    |    |    
+55E5 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+55E5 .|    |    |    |    |    |    	<cas:authenticationSuccess>
+55E5 .|    |    |    |    |    |    		<cas:user>i.gde</cas:user>
+55E5 .|    |    |    |    |    |    
+55E5 .|    |    |    |    |    |    		<cas:attributes>
+55E5 .|    |    |    |    |    |    		    
+55E5 .|    |    |    |    |    |    			
+55E5 .|    |    |    |    |    |    			   
+55E5 .|    |    |    |    |    |    			   
+55E5 .|    |    |    |    |    |    			   
+55E5 .|    |    |    |    |    |    			   
+55E5 .|    |    |    |    |    |    				<cas:ldap_cn>I GDE DHARMA N</cas:ldap_cn>
+55E5 .|    |    |    |    |    |    			   
+55E5 .|    |    |    |    |    |    			
+55E5 .|    |    |    |    |    |    		    
+55E5 .|    |    |    |    |    |    			
+55E5 .|    |    |    |    |    |    			   
+55E5 .|    |    |    |    |    |    			   
+55E5 .|    |    |    |    |    |    			   
+55E5 .|    |    |    |    |    |    			   
+55E5 .|    |    |    |    |    |    				<cas:peran_user>staff</cas:peran_user>
+55E5 .|    |    |    |    |    |    			   
+55E5 .|    |    |    |    |    |    			
+55E5 .|    |    |    |    |    |    		    
+55E5 .|    |    |    |    |    |    			
+55E5 .|    |    |    |    |    |    			   
+55E5 .|    |    |    |    |    |    			   
+55E5 .|    |    |    |    |    |    			   
+55E5 .|    |    |    |    |    |    			   
+55E5 .|    |    |    |    |    |    				<cas:nip>100120310270012891</cas:nip>
+55E5 .|    |    |    |    |    |    			   
+55E5 .|    |    |    |    |    |    			
+55E5 .|    |    |    |    |    |    		    
+55E5 .|    |    |    |    |    |    			
+55E5 .|    |    |    |    |    |    			   
+55E5 .|    |    |    |    |    |    			   
+55E5 .|    |    |    |    |    |    			   
+55E5 .|    |    |    |    |    |    			   
+55E5 .|    |    |    |    |    |    				<cas:nama>I Gde Dharma Nugraha</cas:nama>
+55E5 .|    |    |    |    |    |    			   
+55E5 .|    |    |    |    |    |    			
+55E5 .|    |    |    |    |    |    		    
+55E5 .|    |    |    |    |    |    		</cas:attributes>
+55E5 .|    |    |    |    |    |    
+55E5 .|    |    |    |    |    |    
+55E5 .|    |    |    |    |    |    
+55E5 .|    |    |    |    |    |    	</cas:authenticationSuccess>
+55E5 .|    |    |    |    |    |    </cas:serviceResponse>
+55E5 .|    |    |    |    |    |    
+55E5 .|    |    |    |    |    |     [CurlRequest.php:84]
+55E5 .|    |    |    |    |    <= true
+55E5 .|    |    |    |    <= true
+55E5 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+55E5 .|    |    |    |    |    Found nested jasig style attributes [Client.php:3345]
+55E5 .|    |    |    |    |    Attribute [ldap_cn] = I GDE DHARMA N [Client.php:3352]
+55E5 .|    |    |    |    |    Attribute [peran_user] = staff [Client.php:3352]
+55E5 .|    |    |    |    |    Attribute [nip] = 100120310270012891 [Client.php:3352]
+55E5 .|    |    |    |    |    Attribute [nama] = I Gde Dharma Nugraha [Client.php:3352]
+55E5 .|    |    |    |    <= ''
+55E5 .|    |    |    |    Storing Proxy List [Client.php:3270]
+55E5 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+55E5 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+55E5 .|    |    |    |    <= true
+55E5 .|    |    |    <= true
+55E5 .|    |    |    CAS 2.0 ticket `ST-46-AfdmYcdSgLFde72w3hl6-sso.ui.ac.id' was validated [Client.php:1453]
+55E5 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+55E5 .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+55E5 .|    |    |    Prepare redirect to : http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:1518]
+55E5 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+55E5 .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+55E5 .|    |    |    exit()
+55E5 .|    |    |    -
+55E5 .|    |    -
+55E5 .|    -
+3266 .START (2020-12-05 00:00:53) phpCAS-1.3.6+ ****************** [CAS.php:468]
+3266 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+3266 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+3266 .|    |    Session is authenticated as: i.gde [Client.php:936]
+3266 .|    <= ''
+3266 .<= ''
+3266 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+3266 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+3266 .<= ''
+3266 .=> phpCAS::forceAuthentication() [Cas.php:81]
+3266 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+3266 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+3266 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+3266 .|    |    |    |    user = `i.gde' [Client.php:1622]
+3266 .|    |    |    <= true
+3266 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+3266 .|    |    <= true
+3266 .|    |    no need to authenticate [Client.php:1282]
+3266 .|    <= true
+3266 .<= ''
+3266 .=> phpCAS::isAuthenticated() [Cas.php:89]
+3266 .|    => CAS_Client::isAuthenticated() [CAS.php:1145]
+3266 .|    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+3266 .|    |    |    user = `i.gde' [Client.php:1622]
+3266 .|    |    <= true
+3266 .|    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+3266 .|    <= true
+3266 .<= true
+0CDB .START (2020-12-05 00:01:23) phpCAS-1.3.6+ ****************** [CAS.php:468]
+0CDB .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+0CDB .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+0CDB .|    |    Session is not authenticated [Client.php:938]
+0CDB .|    <= ''
+0CDB .<= ''
+0CDB .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+0CDB .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+0CDB .<= ''
+0CDB .=> phpCAS::forceAuthentication() [Cas.php:81]
+0CDB .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+0CDB .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+0CDB .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+0CDB .|    |    |    |    no user found [Client.php:1635]
+0CDB .|    |    |    <= false
+0CDB .|    |    |    no ticket found [Client.php:1494]
+0CDB .|    |    <= false
+0CDB .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+0CDB .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+0CDB .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+0CDB .|    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+0CDB .|    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+0CDB .|    |    |    <= 'https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+0CDB .|    |    |    Redirect to : https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F [Client.php:1663]
+0CDB .|    |    |    exit()
+0CDB .|    |    |    -
+0CDB .|    |    -
+0CDB .|    -
+F029 .START (2020-12-05 00:01:24) phpCAS-1.3.6+ ****************** [CAS.php:468]
+F029 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+F029 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+F029 .|    |    Session is not authenticated [Client.php:938]
+F029 .|    |    Ticket 'ST-47-9bNe47PY4ZYsALVh1hys-sso.ui.ac.id' found [Client.php:1020]
+F029 .|    <= ''
+F029 .<= ''
+F029 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+F029 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+F029 .<= ''
+F029 .=> phpCAS::forceAuthentication() [Cas.php:81]
+F029 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+F029 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+F029 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+F029 .|    |    |    |    no user found [Client.php:1635]
+F029 .|    |    |    <= false
+F029 .|    |    |    CAS 2.0 ticket `ST-47-9bNe47PY4ZYsALVh1hys-sso.ui.ac.id' is present [Client.php:1447]
+F029 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+F029 .|    |    |    |     [Client.php:3169]
+F029 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+F029 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+F029 .|    |    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+F029 .|    |    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+F029 .|    |    |    |    <= 'https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+F029 .|    |    |    |    => CAS_Client::_readURL('https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F&ticket=ST-47-9bNe47PY4ZYsALVh1hys-sso.ui.ac.id', NULL, NULL, NULL) [Client.php:3191]
+F029 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+F029 .|    |    |    |    |    |    Response Body: 
+F029 .|    |    |    |    |    |    
+F029 .|    |    |    |    |    |    
+F029 .|    |    |    |    |    |    
+F029 .|    |    |    |    |    |    
+F029 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+F029 .|    |    |    |    |    |    	<cas:authenticationSuccess>
+F029 .|    |    |    |    |    |    		<cas:user>i.gde</cas:user>
+F029 .|    |    |    |    |    |    
+F029 .|    |    |    |    |    |    		<cas:attributes>
+F029 .|    |    |    |    |    |    		    
+F029 .|    |    |    |    |    |    			
+F029 .|    |    |    |    |    |    			   
+F029 .|    |    |    |    |    |    			   
+F029 .|    |    |    |    |    |    			   
+F029 .|    |    |    |    |    |    			   
+F029 .|    |    |    |    |    |    				<cas:ldap_cn>I GDE DHARMA N</cas:ldap_cn>
+F029 .|    |    |    |    |    |    			   
+F029 .|    |    |    |    |    |    			
+F029 .|    |    |    |    |    |    		    
+F029 .|    |    |    |    |    |    			
+F029 .|    |    |    |    |    |    			   
+F029 .|    |    |    |    |    |    			   
+F029 .|    |    |    |    |    |    			   
+F029 .|    |    |    |    |    |    			   
+F029 .|    |    |    |    |    |    				<cas:peran_user>staff</cas:peran_user>
+F029 .|    |    |    |    |    |    			   
+F029 .|    |    |    |    |    |    			
+F029 .|    |    |    |    |    |    		    
+F029 .|    |    |    |    |    |    			
+F029 .|    |    |    |    |    |    			   
+F029 .|    |    |    |    |    |    			   
+F029 .|    |    |    |    |    |    			   
+F029 .|    |    |    |    |    |    			   
+F029 .|    |    |    |    |    |    				<cas:nip>100120310270012891</cas:nip>
+F029 .|    |    |    |    |    |    			   
+F029 .|    |    |    |    |    |    			
+F029 .|    |    |    |    |    |    		    
+F029 .|    |    |    |    |    |    			
+F029 .|    |    |    |    |    |    			   
+F029 .|    |    |    |    |    |    			   
+F029 .|    |    |    |    |    |    			   
+F029 .|    |    |    |    |    |    			   
+F029 .|    |    |    |    |    |    				<cas:nama>I Gde Dharma Nugraha</cas:nama>
+F029 .|    |    |    |    |    |    			   
+F029 .|    |    |    |    |    |    			
+F029 .|    |    |    |    |    |    		    
+F029 .|    |    |    |    |    |    		</cas:attributes>
+F029 .|    |    |    |    |    |    
+F029 .|    |    |    |    |    |    
+F029 .|    |    |    |    |    |    
+F029 .|    |    |    |    |    |    	</cas:authenticationSuccess>
+F029 .|    |    |    |    |    |    </cas:serviceResponse>
+F029 .|    |    |    |    |    |    
+F029 .|    |    |    |    |    |     [CurlRequest.php:84]
+F029 .|    |    |    |    |    <= true
+F029 .|    |    |    |    <= true
+F029 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+F029 .|    |    |    |    |    Found nested jasig style attributes [Client.php:3345]
+F029 .|    |    |    |    |    Attribute [ldap_cn] = I GDE DHARMA N [Client.php:3352]
+F029 .|    |    |    |    |    Attribute [peran_user] = staff [Client.php:3352]
+F029 .|    |    |    |    |    Attribute [nip] = 100120310270012891 [Client.php:3352]
+F029 .|    |    |    |    |    Attribute [nama] = I Gde Dharma Nugraha [Client.php:3352]
+F029 .|    |    |    |    <= ''
+F029 .|    |    |    |    Storing Proxy List [Client.php:3270]
+F029 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+F029 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+F029 .|    |    |    |    <= true
+F029 .|    |    |    <= true
+F029 .|    |    |    CAS 2.0 ticket `ST-47-9bNe47PY4ZYsALVh1hys-sso.ui.ac.id' was validated [Client.php:1453]
+F029 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+F029 .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+F029 .|    |    |    Prepare redirect to : http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:1518]
+F029 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+F029 .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+F029 .|    |    |    exit()
+F029 .|    |    |    -
+F029 .|    |    -
+F029 .|    -
+D829 .START (2020-12-05 00:01:24) phpCAS-1.3.6+ ****************** [CAS.php:468]
+D829 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+D829 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+D829 .|    |    Session is authenticated as: i.gde [Client.php:936]
+D829 .|    <= ''
+D829 .<= ''
+D829 .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+D829 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+D829 .<= ''
+D829 .=> phpCAS::forceAuthentication() [Cas.php:81]
+D829 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+D829 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+D829 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+D829 .|    |    |    |    user = `i.gde' [Client.php:1622]
+D829 .|    |    |    <= true
+D829 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+D829 .|    |    <= true
+D829 .|    |    no need to authenticate [Client.php:1282]
+D829 .|    <= true
+D829 .<= ''
+D829 .=> phpCAS::isAuthenticated() [Cas.php:89]
+D829 .|    => CAS_Client::isAuthenticated() [CAS.php:1145]
+D829 .|    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+D829 .|    |    |    user = `i.gde' [Client.php:1622]
+D829 .|    |    <= true
+D829 .|    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+D829 .|    <= true
+D829 .<= true
+9E4F .START (2020-12-05 00:02:10) phpCAS-1.3.6+ ****************** [CAS.php:468]
+9E4F .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+9E4F .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+9E4F .|    |    Session is not authenticated [Client.php:938]
+9E4F .|    <= ''
+9E4F .<= ''
+9E4F .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+9E4F .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+9E4F .<= ''
+9E4F .=> phpCAS::forceAuthentication() [Cas.php:81]
+9E4F .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+9E4F .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+9E4F .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+9E4F .|    |    |    |    no user found [Client.php:1635]
+9E4F .|    |    |    <= false
+9E4F .|    |    |    no ticket found [Client.php:1494]
+9E4F .|    |    <= false
+9E4F .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+9E4F .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+9E4F .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+9E4F .|    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+9E4F .|    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+9E4F .|    |    |    <= 'https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+9E4F .|    |    |    Redirect to : https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F [Client.php:1663]
+9E4F .|    |    |    exit()
+9E4F .|    |    |    -
+9E4F .|    |    -
+9E4F .|    -
+10FC .START (2020-12-05 00:02:10) phpCAS-1.3.6+ ****************** [CAS.php:468]
+10FC .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+10FC .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+10FC .|    |    Session is not authenticated [Client.php:938]
+10FC .|    |    Ticket 'ST-48-houyuG5L6efaLs4KFEIP-sso.ui.ac.id' found [Client.php:1020]
+10FC .|    <= ''
+10FC .<= ''
+10FC .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+10FC .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+10FC .<= ''
+10FC .=> phpCAS::forceAuthentication() [Cas.php:81]
+10FC .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+10FC .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+10FC .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+10FC .|    |    |    |    no user found [Client.php:1635]
+10FC .|    |    |    <= false
+10FC .|    |    |    CAS 2.0 ticket `ST-48-houyuG5L6efaLs4KFEIP-sso.ui.ac.id' is present [Client.php:1447]
+10FC .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+10FC .|    |    |    |     [Client.php:3169]
+10FC .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+10FC .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+10FC .|    |    |    |    |    |    Final URI: http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:3548]
+10FC .|    |    |    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+10FC .|    |    |    |    <= 'https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F'
+10FC .|    |    |    |    => CAS_Client::_readURL('https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Faccreditation%2Flogin%2Fsso%3Fref%3Dhttp%3A%2F%2Flocalhost%2Faccreditation%2F&ticket=ST-48-houyuG5L6efaLs4KFEIP-sso.ui.ac.id', NULL, NULL, NULL) [Client.php:3191]
+10FC .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+10FC .|    |    |    |    |    |    Response Body: 
+10FC .|    |    |    |    |    |    
+10FC .|    |    |    |    |    |    
+10FC .|    |    |    |    |    |    
+10FC .|    |    |    |    |    |    
+10FC .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+10FC .|    |    |    |    |    |    	<cas:authenticationSuccess>
+10FC .|    |    |    |    |    |    		<cas:user>i.gde</cas:user>
+10FC .|    |    |    |    |    |    
+10FC .|    |    |    |    |    |    		<cas:attributes>
+10FC .|    |    |    |    |    |    		    
+10FC .|    |    |    |    |    |    			
+10FC .|    |    |    |    |    |    			   
+10FC .|    |    |    |    |    |    			   
+10FC .|    |    |    |    |    |    			   
+10FC .|    |    |    |    |    |    			   
+10FC .|    |    |    |    |    |    				<cas:ldap_cn>I GDE DHARMA N</cas:ldap_cn>
+10FC .|    |    |    |    |    |    			   
+10FC .|    |    |    |    |    |    			
+10FC .|    |    |    |    |    |    		    
+10FC .|    |    |    |    |    |    			
+10FC .|    |    |    |    |    |    			   
+10FC .|    |    |    |    |    |    			   
+10FC .|    |    |    |    |    |    			   
+10FC .|    |    |    |    |    |    			   
+10FC .|    |    |    |    |    |    				<cas:peran_user>staff</cas:peran_user>
+10FC .|    |    |    |    |    |    			   
+10FC .|    |    |    |    |    |    			
+10FC .|    |    |    |    |    |    		    
+10FC .|    |    |    |    |    |    			
+10FC .|    |    |    |    |    |    			   
+10FC .|    |    |    |    |    |    			   
+10FC .|    |    |    |    |    |    			   
+10FC .|    |    |    |    |    |    			   
+10FC .|    |    |    |    |    |    				<cas:nip>100120310270012891</cas:nip>
+10FC .|    |    |    |    |    |    			   
+10FC .|    |    |    |    |    |    			
+10FC .|    |    |    |    |    |    		    
+10FC .|    |    |    |    |    |    			
+10FC .|    |    |    |    |    |    			   
+10FC .|    |    |    |    |    |    			   
+10FC .|    |    |    |    |    |    			   
+10FC .|    |    |    |    |    |    			   
+10FC .|    |    |    |    |    |    				<cas:nama>I Gde Dharma Nugraha</cas:nama>
+10FC .|    |    |    |    |    |    			   
+10FC .|    |    |    |    |    |    			
+10FC .|    |    |    |    |    |    		    
+10FC .|    |    |    |    |    |    		</cas:attributes>
+10FC .|    |    |    |    |    |    
+10FC .|    |    |    |    |    |    
+10FC .|    |    |    |    |    |    
+10FC .|    |    |    |    |    |    	</cas:authenticationSuccess>
+10FC .|    |    |    |    |    |    </cas:serviceResponse>
+10FC .|    |    |    |    |    |    
+10FC .|    |    |    |    |    |     [CurlRequest.php:84]
+10FC .|    |    |    |    |    <= true
+10FC .|    |    |    |    <= true
+10FC .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+10FC .|    |    |    |    |    Found nested jasig style attributes [Client.php:3345]
+10FC .|    |    |    |    |    Attribute [ldap_cn] = I GDE DHARMA N [Client.php:3352]
+10FC .|    |    |    |    |    Attribute [peran_user] = staff [Client.php:3352]
+10FC .|    |    |    |    |    Attribute [nip] = 100120310270012891 [Client.php:3352]
+10FC .|    |    |    |    |    Attribute [nama] = I Gde Dharma Nugraha [Client.php:3352]
+10FC .|    |    |    |    <= ''
+10FC .|    |    |    |    Storing Proxy List [Client.php:3270]
+10FC .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+10FC .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+10FC .|    |    |    |    <= true
+10FC .|    |    |    <= true
+10FC .|    |    |    CAS 2.0 ticket `ST-48-houyuG5L6efaLs4KFEIP-sso.ui.ac.id' was validated [Client.php:1453]
+10FC .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+10FC .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+10FC .|    |    |    Prepare redirect to : http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/ [Client.php:1518]
+10FC .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+10FC .|    |    |    <= 'http://localhost/accreditation/login/sso?ref=http://localhost/accreditation/'
+10FC .|    |    |    exit()
+10FC .|    |    |    -
+10FC .|    |    -
+10FC .|    -
+6EDF .START (2020-12-05 00:02:10) phpCAS-1.3.6+ ****************** [CAS.php:468]
+6EDF .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:56]
+6EDF .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:360]
+6EDF .|    |    Session is authenticated as: i.gde [Client.php:936]
+6EDF .|    <= ''
+6EDF .<= ''
+6EDF .=> phpCAS::setNoCasServerValidation() [Cas.php:60]
+6EDF .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1645]
+6EDF .<= ''
+6EDF .=> phpCAS::forceAuthentication() [Cas.php:81]
+6EDF .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+6EDF .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+6EDF .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+6EDF .|    |    |    |    user = `i.gde' [Client.php:1622]
+6EDF .|    |    |    <= true
+6EDF .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+6EDF .|    |    <= true
+6EDF .|    |    no need to authenticate [Client.php:1282]
+6EDF .|    <= true
+6EDF .<= ''
+6EDF .=> phpCAS::isAuthenticated() [Cas.php:89]
+6EDF .|    => CAS_Client::isAuthenticated() [CAS.php:1145]
+6EDF .|    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+6EDF .|    |    |    user = `i.gde' [Client.php:1622]
+6EDF .|    |    <= true
+6EDF .|    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+6EDF .|    <= true
+6EDF .<= true
