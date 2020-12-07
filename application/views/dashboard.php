@@ -122,13 +122,13 @@ to get the desired effect
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <div class="dropdown-divider"></div>
-          <a href="<?=base_url('dashboard/profile')?>" class="dropdown-item">
+          <a href="<?=base_url('login/profile')?>" class="dropdown-item">
             <i class="fas fa-address-card mr-2"></i>Profile
           </a>
           <?php
           if($login_SSO != "yes"){
           ?>          
-          <a href="<?=base_url('dashboard/gantiPass')?>" class="dropdown-item">
+          <a href="<?=base_url('login/gantiPass')?>" class="dropdown-item">
             <i class="fas fa-key mr-2"></i>Ganti Password
           </a>
           <?php

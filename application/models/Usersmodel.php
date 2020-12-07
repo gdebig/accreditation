@@ -28,13 +28,18 @@ class Usersmodel extends CI_Model {
 		return $checkUsername;
 	}
 
+	public function checkPassword($username, $password){
+		$checkPassword = $this->db->get_where('tbl_users', ['username' => $username, 'password' => md5($password)])->num_rows();
+		return $checkPassword;
+	}
+
 	public function byId($id) {
 		$byId = $this->db->get_where('tbl_users', ['id' => $id]);
 		return $byId->row();
 	}
 
 	public function byUserName($username){
-		$res = $this->db->limit(1)->where('username',$u['username'])->get('tbl_users')->result();
+		$res = $this->db->limit(1)->where('username',$username)->get('tbl_users')->result();
 		return $res;
 	}
 
@@ -119,5 +124,68 @@ class Usersmodel extends CI_Model {
 	}
 	public function getById($id){
 		return $this->db->query("SELECT name, email, trim(concat(gelar_depan, ' ', name, ', ', gelar_belakang)) fullname, no_HP from users where id=$id")->row();
+	}
+
+	public function checkAdmin(){
+		$role = $this->session->userdata('role');
+		if ($role[0] == "1"){
+			return TRUE;
+		} else {
+			return FALSE;
+		}
+	}
+
+	public function checkTimKurikulum(){
+		$role = $this->session->userdata('role');
+		if ($role[1] == "1"){
+			return TRUE;
+		} else {
+			return FALSE;
+		}
+	}
+
+	public function checkManProdi(){
+		$role = $this->session->userdata('role');
+		if ($role[2] == "1"){
+			return TRUE;
+		} else {
+			return FALSE;
+		}
+	}
+
+	public function checkKoordintaro(){
+		$role = $this->session->userdata('role');
+		if ($role[3] == "1"){
+			return TRUE;
+		} else {
+			return FALSE;
+		}
+	}
+
+	public function checkPengajar(){
+		$role = $this->session->userdata('role');
+		if ($role[4] == "1"){
+			return TRUE;
+		} else {
+			return FALSE;
+		}
+	}
+
+	public function checkPeer(){
+		$role = $this->session->userdata('role');
+		if ($role[5] == "1"){
+			return TRUE;
+		} else {
+			return FALSE;
+		}
+	}
+
+	public function checkPDCA(){
+		$role = $this->session->userdata('role');
+		if ($role[6] == "1"){
+			return TRUE;
+		} else {
+			return FALSE;
+		}
 	}
 }

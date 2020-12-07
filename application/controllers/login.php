@@ -115,4 +115,147 @@ class Login extends CI_Controller {
 			redirect('dashboard');
 		}
 	}
+
+	public function gantiPass()
+	{
+        $data = [
+            'title' => "D!Acreditation | Ganti Password",
+			'name' => $this->session->userdata('name'),
+			'login_SSO' => $this->session->userdata('login_SSO'),
+            'page' => 'Ganti Password'
+
+        ];
+		$this->load->view('ganti_pass', $data);
+	}
+
+	public function doGantiPass()
+	{
+		$aksi = $this->input->post("aksi");
+		if ($aksi == "batal"){
+			redirect('dashboard');
+		} else {
+			$this->load->library('form_validation');
+
+			$this->form_validation->set_rules('oldpassword', 'Password Lama', 'required|callback_password_check',
+						array('required' => 'Field %s tidak boleh kosong'));
+			$this->form_validation->set_rules('newpass', 'Password Baru', 'required|min_length[8]',
+						array('required' => 'Field %s tidak boleh kosong', 'min_length' => 'Jumlah karakter minimal 8'));
+			$this->form_validation->set_rules('confnewpass', 'Confirm Password Baru', 'required|matches[newpass]',
+						array('required' => 'Field %s tidak boleh kosong', 'matches' => 'Isi harus sama dengan Field Password Baru'));
+
+			if ($this->form_validation->run() == FALSE){
+				$data = [
+					'title' => "D!Acreditation | Ganti Password",
+					'name' => $this->session->userdata('name'),
+					'login_SSO' => $this->session->userdata('login_SSO'),
+					'page' => 'Ganti Password',
+					'status' => 'gagal'
+				];
+				$this->load->view('ganti_pass_err', $data);
+			} else {
+				$password = $this->input->post('newpass');
+				$username = $this->session->userdata('username');
+				$data = array(
+					'password' => md5($password)
+				);
+				$this->db->where('username', $username);
+				$this->db->update('tbl_users', $data);
+				
+				$data = [
+					'title' => "D!Acreditation | Ganti Password",
+					'name' => $this->session->userdata('name'),
+					'login_SSO' => $this->session->userdata('login_SSO'),
+					'page' => 'Ganti Password',
+					'status' => 'sukses'
+				];
+				$this->load->view('ganti_pass_err', $data);
+			}
+		}
+	}
+
+	public function password_check($str){
+		$username = $this->session->userdata('username');
+		$res = $this->usersmodel->checkPassword($username, $str);
+
+		if ($res <= 0){
+			$this->form_validation->set_message('password_check', 'Password lama tidak sesuai');
+			return FALSE;
+		} else {
+			return TRUE;
+		}
+	}
+	
+	public function profile()
+	{	
+		$username = $this->session->userdata('username');	
+		$datauser = $this->usersmodel->byUserName($username);
+        $data = [
+            'title' => "D!Acreditation | Profile",
+			'name' => $this->session->userdata('name'),
+			'login_SSO' => $this->session->userdata('login_SSO'),
+			'datauser' => $datauser,
+            'page' => 'Profile'
+
+        ];
+
+		foreach($datauser as $u){
+			$data['namalengkap'] = $u->name;
+			$data['gelar_depan'] = $u->gelar_depan;
+			$data['gelar_belakang'] = $u->gelar_belakang;
+			$data['NIP'] = $u->NIP;
+			$data['username'] = $u->username;
+			$data['email'] = $u->email;
+			$data['no_HP'] = $u->no_HP;
+			$data['prodi'] = $u->prodi;
+		}
+		$this->load->view('profile', $data);
+	}
+
+	public function doUpdateProfile(){
+		$this->load->library('form_validation');
+
+		$this->form_validation->set_rules('email', 'Email', 'valid_email',
+						array('valid_email' => 'Isian Email tidak memenuhi format email yang valid'));
+
+		if ($this->form_validation->run() == FALSE){
+			$data = [
+				'title' => "D!Acreditation | Profile",
+				'name' => $this->session->userdata('name'),
+				'login_SSO' => $this->session->userdata('login_SSO'),
+				'page' => 'Profile',
+				'status' => 'gagal'
+			];
+			$this->load->view('profile_err', $data);
+		} else {
+			$namalengkap = $this->input->post('namalengkap');
+			$gelar_depan = $this->input->post('gelardepan');
+			$gelar_belakang = $this->input->post('gelarbelakang');
+			$nip = $this->input->post('nip');
+			$email = $this->input->post('email');
+			$no_HP = $this->input->post('nohp');
+			$prodi = $this->input->post('prodi');
+			$username = $this->session->userdata('username');
+			$datauser = array(
+				'name' => $namalengkap,
+				'gelar_depan' => $gelar_depan,
+				'gelar_belakang' => $gelar_belakang,
+				'NIP' => $nip,
+				'email' => $email,
+				'no_HP' => $no_HP,
+				'prodi' => $prodi,
+				'date_modified' => date("Y-m-d h:i:s")
+			);
+			$this->db->where('username', $username);
+			$this->db->update('tbl_users', $datauser);
+
+			$data = [
+				'title' => "D!Acreditation | Profile",
+				'name' => $this->session->userdata('name'),
+				'login_SSO' => $this->session->userdata('login_SSO'),
+				'page' => 'Profile',
+				'status' => 'sukses'
+			];
+			$this->load->view('profile_err', $data);
+		}
+	}
 }
