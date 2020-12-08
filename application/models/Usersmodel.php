@@ -34,8 +34,8 @@ class Usersmodel extends CI_Model {
 	}
 
 	public function byId($id) {
-		$byId = $this->db->get_where('tbl_users', ['id' => $id]);
-		return $byId->row();
+		$byId = $this->db->get_where('tbl_users', ['user_id' => $id]);
+		return $byId->result();
 	}
 
 	public function byUserName($username){
@@ -43,18 +43,6 @@ class Usersmodel extends CI_Model {
 		return $res;
 	}
 
-	public function update($data, $id) {
-		$this->db->set($data);
-		$this->db->where('id', $id);
-		$update = $this->db->update('tbl_users');
-		return $update;
-	}
-
-	public function delete($id) {
-		$this->db->where('id', $id);
-		$delete = $this->db->delete('tbl_users');
-		return $delete;
-	}
 	public function getOrInsert($u){
 		$res = $this->db->limit(1)->where('username',$u['username'])->get('tbl_users')->result();
 		if ( count($res) == 0 ){ // if not exist, create one

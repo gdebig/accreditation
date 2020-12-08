@@ -120,7 +120,7 @@ $this->load->view("temp/main_side_view");
                           <label for="checkKur" class="custom-control-label">Tim Kurikulum</label>
                         </div>
                         <div class="custom-control custom-checkbox">
-                          <input type="hidden" name="role2" value="0"><input type="hidden" name="role2" value="0"><input class="custom-control-input" type="checkbox" id="checkMan" name="role[]" value="1">
+                          <input type="hidden" name="role2" value="0"><input type="hidden" name="role2" value="0"><input class="custom-control-input" type="checkbox" id="checkMan" name="role2" value="1">
                           <label for="checkMan" class="custom-control-label">Manajemen Prodi</label>
                         </div>
                         <div class="custom-control custom-checkbox">

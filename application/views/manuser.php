@@ -54,7 +54,13 @@ $this->load->view("temp/main_side_view");
                     <td><?=$i;?></td>
                     <td><?=$a->name;?></td>
                     <td><?=$a->username;?></td>
-                    <td><?=$a->prodi;?></td>
+                    <td>
+                      <?php
+                        if ($a->prodi == "elektro") { echo "Teknik Elektro"; }
+                        if ($a->prodi == "komputer") { echo "Teknik Komputer"; }
+                        if ($a->prodi == "biomedik") { echo "Teknik Biomedik"; }
+                      ?>
+                    </td>
                     <td>
                     <?php
                         if ($a->role[0] == "1"){ echo "Admin <br />"; }
@@ -62,11 +68,11 @@ $this->load->view("temp/main_side_view");
                         if ($a->role[2] == "1"){ echo "Manajemen <br />"; }
                         if ($a->role[3] == "1"){ echo "Dosen Koordinator <br />"; }
                         if ($a->role[4] == "1"){ echo "Dosen Pengajar <br />"; }
-                        if ($a->role[5] == "1"){ echo "Dosen Peer"; }
+                        if ($a->role[5] == "1"){ echo "Dosen Peer <br />"; }
                         if ($a->role[6] == "1"){ echo "Tim PDCA"; }
                     ?>
                     </td>
-                    <td><a href="<?=base_url('dashboard/ubahuser')?>" class="btn btn-block btn-warning"><i class='fas fa-user-edit'></i> Ubah</a><a href="<?=base_url('dashboard/hapususer')?>" class="btn btn-block btn-danger"><i class='fas fa-eraser'></i> Hapus</a></td>
+                    <td><a href="<?=base_url('dashboard/ubahuser/'.$a->user_id)?>" class="btn btn-block btn-warning"><i class='fas fa-user-edit'></i> Ubah</a><a href="<?=base_url('dashboard/hapususer/'.$a->user_id)?>" class="btn btn-block btn-danger" onclick="return confirm('Apakah yakin mau menghapus user ?')"><i class='fas fa-eraser'></i> Hapus</a></td>
                     </tr>
                     <?php
                     $i++;
