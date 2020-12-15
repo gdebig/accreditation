@@ -19,6 +19,7 @@ class Usersmodel extends CI_Model {
 	}
 
 	public function getAll() {
+		$this->db->order_by('name', 'ASC');
 		$getAll = $this->db->get('tbl_users');
 		return $getAll->result();
 	}
@@ -175,5 +176,38 @@ class Usersmodel extends CI_Model {
 		} else {
 			return FALSE;
 		}
+	}
+
+	public function updateRole($id, $man){
+		$this->db->select('role');
+		$this->db->from('tbl_users');
+		$this->db->limit('1');
+		$this->db->where('user_id', $id);
+		$role = get_object_vars($this->db->get()->row());
+
+		if ($man == "manajemen"){
+			$role = substr_replace($role, '1', 2, 1);
+		}
+		if ($man == "nonman"){
+			$role = substr_replace($role, '0', 2, 1);
+		}
+		if ($man == "timkur"){
+			$role = substr_replace($role, '1', 1, 1);			
+		}
+		if ($man == "nontimkur"){
+			$role = substr_replace($role, '0', 1, 1);			
+		}
+		if ($man == "timpdca"){
+			$role = substr_replace($role, '1', 6, 1);			
+		}
+		if ($man == "nontimpdca"){
+			$role = substr_replace($role, '0', 6, 1);			
+		}
+		
+		$data = array(
+			'role' => implode($role)
+		);
+		$this->db->where('user_id', $id);
+		$this->db->update('tbl_users', $data);
 	}
 }

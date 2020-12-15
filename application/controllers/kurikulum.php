@@ -28,9 +28,10 @@ class Kurikulum extends CI_Controller {
         $data = [
             'title' => "D!Acreditation | Kurikulum",
             'name' => $this->session->userdata('name'),
+			'login_SSO' => $this->session->userdata('login_SSO'),
             'page' => 'Kurikulum'
 
         ];
-		$this->load->view('kurikulum', $data);
+		$this->load->view('view_kurikulum', $data);
 	}
 }

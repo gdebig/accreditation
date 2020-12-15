@@ -63,82 +63,112 @@
           </li>
           <?php
             }
+            if (($role[0] == "1") || ($role[2] == "1")){
           ?>
           <li class="nav-item has-treeview menu-open">
             <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-book"></i>
               <p>
-                Kurikulum
+                Manajemen Prodi
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?=base_url('prodi')?>" class="nav-link">
+                <a href="<?=base_url('manajemen/timkurikulum')?>" class="nav-link">
                   <i class="far fa-circle nav-icon active"></i>
-                  <p>Program Studi</p>
+                  <p>Tim Kurikulum</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?=base_url('kurikulum')?>" class="nav-link">
+                <a href="<?=base_url('manajemen/timpdca')?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Kurikulum</p>
+                  <p>Tim PDCA</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?=base_url('matakuliah/jenis')?>" class="nav-link">
+                <a href="<?=base_url('manajemen/koordinatormk')?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Jenis Matakuliah</p>
+                  <p>Koordinator Mata Kuliah</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?=base_url('matakuliah')?>" class="nav-link">
+                <a href="<?=base_url('manajemen/pengampumk')?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Matakuliah</p>
+                  <p>Dosen Pengampu</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?=base_url('manajemen/dosenpeer')?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Dosen Peer</p>
                 </a>
               </li>
             </ul>
           </li>
+          <?php
+            }
+            if (($role[0] == "1") || ($role[1] == "1")){
+          ?>
           <li class="nav-item has-treeview menu-open">
             <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-copy"></i>
               <p>
-                Kelasku
+                Pengaturan Kurikulum
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?=base_url('kelasku')?>" class="nav-link">
+                <a href="<?=base_url('kurikulum')?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Kelasku</p>
+                  <p>Manajemen Kurikulum</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?=base_url('')?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Mata Kuliah</p>
                 </a>
               </li>
             </ul>
           </li>
+          <?php
+            }
+            if (($role[0] == "1") || ($role[3] == "1")){
+          ?>
           <li class="nav-item has-treeview menu-open">
             <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-server"></i>
               <p>
-                Import
+                Koordinator Mata Kuliah
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?=base_url('siak')?>" class="nav-link">
+                <a href="<?=base_url('')?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Siak</p>
+                  <p>Sub CPMK</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?=base_url('emas')?>" class="nav-link">
+                <a href="<?=base_url('')?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Emas</p>
+                  <p>BRP/SAP</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?=base_url('')?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Matriks Penilaian</p>
                 </a>
               </li>
             </ul>
           </li>
+          <?php
+            }
+          ?>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
